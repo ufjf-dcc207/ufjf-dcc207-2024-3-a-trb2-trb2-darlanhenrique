@@ -7,10 +7,11 @@ function App() {
   return (
     <div>
       <h1>Produções Audiovisuais</h1>
-      {PRODUCTIONS.audiovisual_productions.map((production, index) => (
+      {PRODUCTIONS.audiovisual_productions.map((production) => (
         <Production 
-          key={index}
-          name={production.name} 
+          key={production.name}
+          name={production.name}
+          year={production.year}
           type={production.type} 
           genre={production.genre} 
           length={production.length} 
