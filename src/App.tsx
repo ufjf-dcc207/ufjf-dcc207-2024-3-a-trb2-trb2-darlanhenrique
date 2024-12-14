@@ -3,8 +3,17 @@ import PRODUCTIONS from './Audiovisual_productions.json'
 import Production from './Production'
 import logo from './assets/logo/Net_Prime_Plus_Max_Flix.png';
 
-function App() {
+type CategoryTuplaType = [string, ProductionTuplaType[]];
+type ProductionTuplaType = [string, number, string, string, number, string, string, boolean];
 
+const allGenres = [
+  new Set(
+    PRODUCTIONS.audiovisual_productions
+      .flatMap((production) => production.genre.split("/").map((genre) => genre.trim()))
+  ),
+];
+
+function App() {
   return (
     <div>
       <header className='header'>      
