@@ -1,140 +1,147 @@
 {
   "audiovisual_productions": [
     {
-      "nome": "O Horizonte Perdido",
-      "tipo": "filme",
-      "genero": "aventura, ficção científica",
-      "duracao": 120,
-      "descricao": "Uma expedição intergaláctica busca um planeta misterioso com segredos antigos.",
-      "imagem": ""
+      "name": "O Horizonte Perdido",
+      "type": "filme",
+      "genre": "aventura, ficção científica",
+      "length": 120,
+      "description": "Uma expedição intergaláctica busca um planeta misterioso com segredos antigos.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "Segredos da Noite",
-      "tipo": "série",
-      "genero": "drama, suspense",
-      "duracao": 10,
-      "descricao": "Detetives lidam com uma série de crimes inexplicáveis em uma pequena cidade.",
-      "imagem": ""
+      "name": "Segredos da Noite",
+      "type": "série",
+      "genre": "drama, suspense",
+      "length": 10,
+      "description": "Detetives lidam com uma série de crimes inexplicáveis em uma pequena cidade.",
+      "image": ""
     },
     {
-      "nome": "Maré Alta",
-      "tipo": "documentario",
-      "genero": "natureza, aventura",
-      "duracao": 90,
-      "descricao": "Exploração sobre os efeitos da mudança climática nos oceanos e seus impactos globais.",
-      "imagem": ""
+      "name": "Maré Alta",
+      "type": "documentario",
+      "genre": "natureza, aventura",
+      "length": 90,
+      "description": "Exploração sobre os efeitos da mudança climática nos oceanos e seus impactos globais.",
+      "image": ""
     },
     {
-      "nome": "Conspiração no Tempo",
-      "tipo": "novela",
-      "genero": "ficção científica, drama",
-      "duracao": 50,
-      "descricao": "Uma trama que mistura manipulação temporal com segredos históricos e disputas de poder.",
-      "imagem": ""
+      "name": "Conspiração no Tempo",
+      "type": "novela",
+      "genre": "ficção científica, drama",
+      "length": 50,
+      "description": "Uma trama que mistura manipulação temporal com segredos históricos e disputas de poder.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "Entre Sombras e Luzes",
-      "tipo": "filme",
-      "genero": "romance, drama",
-      "duracao": 105,
-      "descricao": "Uma história de amor que desafia o destino em meio a desafios inesperados.",
-      "imagem": ""
+      "name": "Entre Sombras e Luzes",
+      "type": "filme",
+      "genre": "romance, drama",
+      "length": 105,
+      "description": "Uma história de amor que desafia o destino em meio a desafios inesperados.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "Os Últimos Herdeiros",
-      "tipo": "série",
-      "genero": "drama, fantasia",
-      "duracao": 12,
-      "descricao": "Uma disputa pela sobrevivência entre clãs antigos em um mundo mágico ameaçado.",
-      "imagem": ""
+      "name": "Os Últimos Herdeiros",
+      "type": "série",
+      "genre": "drama, fantasia",
+      "length": 12,
+      "description": "Uma disputa pela sobrevivência entre clãs antigos em um mundo mágico ameaçado.",
+      "image": ""
     },
     {
-      "nome": "Fronteiras do Amanhã",
-      "tipo": "documentario",
-      "genero": "tecnologia, futuro",
-      "duracao": 85,
-      "descricao": "Explorando como a tecnologia está moldando o futuro das sociedades humanas.",
-      "imagem": ""
+      "name": "Fronteiras do Amanhã",
+      "type": "documentario",
+      "genre": "tecnologia, futuro",
+      "length": 85,
+      "description": "Explorando como a tecnologia está moldando o futuro das sociedades humanas.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "A Cidade Submersa",
-      "tipo": "filme",
-      "genero": "mistério, aventura",
-      "duracao": 130,
-      "descricao": "Uma equipe de exploradores busca uma cidade antiga que foi engolida pelo oceano.",
-      "imagem": ""
+      "name": "A Cidade Submersa",
+      "type": "filme",
+      "genre": "mistério, aventura",
+      "length": 130,
+      "description": "Uma equipe de exploradores busca uma cidade antiga que foi engolida pelo oceano.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "Ciclos da Alma",
-      "tipo": "novela",
-      "genero": "psicológico, drama",
-      "duracao": 60,
-      "descricao": "Uma história introspectiva sobre relações humanas e a busca por autoconhecimento.",
-      "imagem": ""
+      "name": "Ciclos da Alma",
+      "type": "novela",
+      "genre": "psicológico, drama",
+      "length": 60,
+      "description": "Uma história introspectiva sobre relações humanas e a busca por autoconhecimento.",
+      "image": ""
     },
     {
-      "nome": "Dimensões Paralelas",
-      "tipo": "série",
-      "genero": "ficção científica, suspense",
-      "duracao": 8,
-      "descricao": "Uma série que explora realidades alternativas e o impacto das escolhas humanas.",
-      "imagem": ""
+      "name": "Dimensões Paralelas",
+      "type": "série",
+      "genre": "ficção científica, suspense",
+      "length": 8,
+      "description": "Uma série que explora realidades alternativas e o impacto das escolhas humanas.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "Viajantes da Eternidade",
-      "tipo": "documentario",
-      "genero": "histórico, aventura",
-      "duracao": 100,
-      "descricao": "Uma exploração de civilizações antigas e suas conexões com mistérios históricos.",
-      "imagem": ""
+      "name": "Viajantes da Eternidade",
+      "type": "documentario",
+      "genre": "histórico, aventura",
+      "length": 100,
+      "description": "Uma exploração de civilizações antigas e suas conexões com mistérios históricos.",
+      "image": ""
     },
     {
-      "nome": "Pacto com as Sombras",
-      "tipo": "filme",
-      "genero": "terror, suspense",
-      "duracao": 100,
-      "descricao": "Uma série de eventos perturbadores acontece após um antigo pacto ser rompido.",
-      "imagem": ""
+      "name": "Pacto com as Sombras",
+      "type": "filme",
+      "genre": "terror, suspense",
+      "length": 100,
+      "description": "Uma série de eventos perturbadores acontece após um antigo pacto ser rompido.",
+      "image": ""
     },
     {
-      "nome": "O Labirinto das Almas",
-      "tipo": "novela",
-      "genero": "drama, suspense",
-      "duracao": 55,
-      "descricao": "Mistérios pessoais e segredos familiares se entrelaçam em uma trama cheia de reviravoltas.",
-      "imagem": ""
+      "name": "O Labirinto das Almas",
+      "type": "novela",
+      "genre": "drama, suspense",
+      "length": 55,
+      "description": "Mistérios pessoais e segredos familiares se entrelaçam em uma trama cheia de reviravoltas.",
+      "image": ""
     },
     {
-      "nome": "Época dos Deuses",
-      "tipo": "série",
-      "genero": "fantasia, aventura",
-      "duracao": 14,
-      "descricao": "Deuses e mortais entram em conflito em uma batalha épica por poder e sobrevivência.",
-      "imagem": ""
+      "name": "Época dos Deuses",
+      "type": "série",
+      "genre": "fantasia, aventura",
+      "length": 14,
+      "description": "Deuses e mortais entram em conflito em uma batalha épica por poder e sobrevivência.",
+      "image": "",
+      "isNew": true
     },
     {
-      "nome": "O Som do Amanhã",
-      "tipo": "documentario",
-      "genero": "cultura, música",
-      "duracao": 80,
-      "descricao": "Explorando o poder transformador da música nas sociedades e sua evolução histórica.",
-      "imagem": ""
+      "name": "O Som do Amanhã",
+      "type": "documentario",
+      "genre": "cultura, música",
+      "length": 80,
+      "description": "Explorando o poder transformador da música nas sociedades e sua evolução histórica.",
+      "image": ""
     },
     {
-      "nome": "Reinos em Guerra",
-      "tipo": "filme",
-      "genero": "ação, fantasia",
-      "duracao": 140,
-      "descricao": "Reinos antigos entram em guerra em meio a batalhas épicas e alianças instáveis.",
-      "imagem": ""
+      "name": "Reinos em Guerra",
+      "type": "filme",
+      "genre": "ação, fantasia",
+      "length": 140,
+      "description": "Reinos antigos entram em guerra em meio a batalhas épicas e alianças instáveis.",
+      "image": ""
     },
     {
-      "nome": "A Última Carta",
-      "tipo": "novela",
-      "genero": "romance, drama",
-      "duracao": 48,
-      "descricao": "Uma série de segredos é revelada através de uma carta antiga e perdida no tempo.",
-      "imagem": ""
+      "name": "A Última Carta",
+      "type": "novela",
+      "genre": "romance, drama",
+      "length": 48,
+      "description": "Uma série de segredos é revelada através de uma carta antiga e perdida no tempo.",
+      "image": ""
     }
   ]
 }
