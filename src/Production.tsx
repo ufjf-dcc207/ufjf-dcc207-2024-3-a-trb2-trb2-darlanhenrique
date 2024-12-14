@@ -24,7 +24,7 @@ export default function Production({name, year, type, genre, length, description
             <div className="description">{description}</div>
             <div className="type">{type}</div>
             <div className="year">{year}</div>
-            <div className="length">{length}{type === "filme" || type === "documentario" ? " min" : " episódios"}</div>
+            <div className="length">{length}{type === "filme" || type === "documentario" ? "min" : " episódios"}</div>
             <div className="genre">
                 {genres.map((genreItem, ) => (
                     <span key={genreItem} className="genre-item"><a href={`#${genreItem}`}>{genreItem.trim()}</a> </span>

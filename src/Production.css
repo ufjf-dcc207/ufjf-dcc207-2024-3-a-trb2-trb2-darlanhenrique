@@ -2,7 +2,7 @@
   background-color: #00050d;
   color: #fff;
   border: 1px solid #01102a;
-  box-shadow: 0 0 1rem #01102a;
+  box-shadow: 0 0 0.3rem #4d5d7d;
   border-radius: 0.5rem;
   max-width: 25rem;
   max-height: 50rem;
@@ -94,5 +94,10 @@
             }
         }
     }    
+}
+
+.production:hover {
+  transform: scale(1.01);
+  box-shadow: 0 4px 0.5rem #bad1f8; 
 
 }

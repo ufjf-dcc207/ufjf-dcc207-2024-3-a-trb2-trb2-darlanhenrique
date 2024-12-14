@@ -7,7 +7,11 @@ function App() {
 
   return (
     <div>
-      <img className="logo" src={logo} alt="Net Prime Plus Max Flix" />
+      <header className='header'>      
+        <img className="logo" src={logo} alt="Net Prime Plus Max Flix" />
+        <div className='title'>Net Prime Plus Max Flix</div>
+        <div className='subtitle'>Aqui você encontra as melhores produções audiovisuais de maneira 100% "honesta"</div>
+      </header>
       {PRODUCTIONS.audiovisual_productions.map((production) => (
         <Production 
           key={production.name}
