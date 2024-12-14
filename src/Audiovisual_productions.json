@@ -7,7 +7,7 @@
       "genre": "ficção científica",
       "length": 45,
       "description": "Uma série sobre realidades paralelas e escolhas que alteram o futuro.",
-      "image": "Ecos_do_Amanha.jpg",
+      "image": "Ecos_do_Amanha.png",
       "isNew": true
     },
     {
@@ -17,7 +17,7 @@
       "genre": "histórico",
       "length": 60,
       "description": "Explorando eventos históricos e suas repercussões no mundo moderno.",
-      "image": "Caminhos_do_Passado.jpg"
+      "image": "Caminhos_do_Passado.png"
     },
     {
       "name": "Sombras da Lua",
@@ -26,7 +26,7 @@
       "genre": "thriller/psicológico",
       "length": 110,
       "description": "Um suspense envolvendo mistérios e segredos sob a luz da lua.",
-      "image": "Sombras_da_Lua.jpg"
+      "image": "Sombras_da_Lua.png"
     },
     {
       "name": "Ritmo de Amanhecer",
@@ -35,7 +35,7 @@
       "genre": "romance/drama",
       "length": 200,
       "description": "Histórias de amor, traição e segredos entrelaçados em uma pequena vila.",
-      "image": "Ritmo_de_Amanhecer.jpg"
+      "image": "Ritmo_de_Amanhecer.png"
     },
     {
       "name": "Astro Hunters",
@@ -44,7 +44,7 @@
       "genre": "aventura/ficção científica",
       "length": 24,
       "description": "Jovens caçadores de estrelas exploram galáxias em busca de mistérios celestiais.",
-      "image": "Astro_Hunters.jpg"
+      "image": "Astro_Hunters.png"
     },
     {
       "name": "Entre Mundos",
@@ -53,7 +53,7 @@
       "genre": "drama/fantasia",
       "length": 50,
       "description": "Uma trama entre o mundo real e um reino fantástico.",
-      "image": "Entre_Mundos.jpg",
+      "image": "Entre_Mundos.png",
       "isNew": true
     },
     {
@@ -63,7 +63,7 @@
       "genre": "psicológico",
       "length": 70,
       "description": "Uma análise profunda sobre a mente e como as memórias moldam quem somos.",
-      "image": "O_Fio_da_Memoria.jpg",
+      "image": "O_Fio_da_Memoria.png",
       "isNew": true
     },
     {
@@ -73,7 +73,7 @@
       "genre": "ação/ficção científica",
       "length": 120,
       "description": "Uma aventura em uma cidade futurista cheia de conspirações e tecnologia.",
-      "image": "Neon_City.jpg"
+      "image": "Neon_City.png"
     },
     {
       "name": "O Último Guardião",
@@ -82,7 +82,7 @@
       "genre": "aventura/ação",
       "length": 150,
       "description": "A busca por um artefato antigo coloca o destino do mundo em jogo.",
-      "image": "O_Ultimo_Guardiao.jpg"
+      "image": "O_Ultimo_Guardiao.png"
     },
     {
       "name": "Dimensões Esquecidas",
@@ -91,7 +91,7 @@
       "genre": "mistério/ficção científica",
       "length": 18,
       "description": "Personagens buscam respostas em realidades alternadas e perigosas.",
-      "image": "Dimensoes_Esquecidas.jpg",
+      "image": "Dimensoes_Esquecidas.png",
       "isNew": true
     },
     {
@@ -101,7 +101,7 @@
       "genre": "científico/aventura",
       "length": 55,
       "description": "Explorando os mistérios de um planeta recentemente descoberto.",
-      "image": "Planeta_X.jpg"
+      "image": "Planeta_X.png"
     },
     {
       "name": "Cores da Eternidade",
@@ -110,7 +110,7 @@
       "genre": "romance/drama",
       "length": 40,
       "description": "Uma história de encontros e reencontros ao longo da vida.",
-      "image": "Cores_da_Eternidade.jpg"
+      "image": "Cores_da_Eternidade.png"
     },
     {
       "name": "Código Infinito",
@@ -119,7 +119,7 @@
       "genre": "ação/tecnologia",
       "length": 130,
       "description": "Hackers e conspirações em uma corrida para decifrar um código secreto.",
-      "image": "Codigo_Infinito.jpg",
+      "image": "Codigo_Infinito.png",
       "isNew": true
     },
     {
@@ -129,7 +129,7 @@
       "genre": "aventura/épico",
       "length": 180,
       "description": "Uma saga envolvendo dinastias, batalhas e segredos antigos.",
-      "image": "Reinos_Ancestrais.jpg"
+      "image": "Reinos_Ancestrais.png"
     },
     {
       "name": "Lendas da Eternidade",
@@ -138,7 +138,7 @@
       "genre": "fantasia/aventura",
       "length": 20,
       "description": "Histórias antigas de poder e batalhas em um mundo mágico.",
-      "image": "Lendas_da_Eternidade.jpg"
+      "image": "Lendas_da_Eternidade.png"
     },
     {
       "name": "Vortex Temporal",
@@ -147,7 +147,7 @@
       "genre": "científico/ficção",
       "length": 65,
       "description": "Explorando os conceitos da física através do espaço-tempo.",
-      "image": "Vortex_Temporal.jpg"
+      "image": "Vortex_Temporal.png"
     },
     {
       "name": "Estrondos do Horizonte",
@@ -156,7 +156,7 @@
       "genre": "aventura/drama",
       "length": 55,
       "description": "A luta por sobrevivência em um cenário pós-catástrofe.",
-      "image": "Estrondos_do_Horizonte.jpg"
+      "image": "Estrondos_do_Horizonte.png"
     }
   ]
 }
