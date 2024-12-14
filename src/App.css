@@ -1,12 +1,12 @@
 #root {
   margin: 0 auto;
-  padding: 1rem 4rem 2rem;
+  padding: 0.1rem 4rem 2rem;
   text-align: center;
 }
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #fff;
   background: linear-gradient(135deg, #00050d, #003d5d);
 }
@@ -16,13 +16,13 @@ body {
   grid-template-areas:
   "logo title"
   "logo subtitle";
-  padding-bottom: 3rem;
+  padding-bottom: 0.5rem;
   
 
   .logo {
     grid-area: logo;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     margin: 1rem auto;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.3);
@@ -37,7 +37,7 @@ body {
 
   .title {
     grid-area: title;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-top: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;

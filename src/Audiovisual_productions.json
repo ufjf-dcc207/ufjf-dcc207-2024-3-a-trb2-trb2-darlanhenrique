@@ -63,7 +63,7 @@
       "genre": "psicológico",
       "length": 70,
       "description": "Uma análise profunda sobre a mente e como as memórias moldam quem somos.",
-      "image": "O_Fio_da_Memoria.png",
+      "image": "O_Fio_da_Memoria.jpg",
       "isNew": true
     },
     {
@@ -73,7 +73,7 @@
       "genre": "ação/ficção científica",
       "length": 120,
       "description": "Uma aventura em uma cidade futurista cheia de conspirações e tecnologia.",
-      "image": "Neon_City.png"
+      "image": "Neon_City.jpg"
     },
     {
       "name": "O Último Guardião",
