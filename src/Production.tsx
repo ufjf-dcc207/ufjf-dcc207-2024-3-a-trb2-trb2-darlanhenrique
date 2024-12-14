@@ -16,7 +16,7 @@ export default function Production({name, year, type, genre, length, description
   return (
     <div className="production">
         <div className="image-container">
-            <img className="image" src={`./src/assets/productions/${image}`} alt={name} />
+            <img className="image" src={`./public/img/productions/${image}`} alt={name} />
             {isNew && <div className="new">{type === "série" || type === "novela" ? "Nova" : " Novo"} {type}</div>}
         </div>
         <div className="details">
