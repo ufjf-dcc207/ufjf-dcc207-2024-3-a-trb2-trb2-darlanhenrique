@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css'
 import PRODUCTIONS from './Audiovisual_productions.json'
 import Category from './Category';
