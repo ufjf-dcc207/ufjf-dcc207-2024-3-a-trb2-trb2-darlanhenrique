@@ -1,0 +1,11 @@
+.navbar {
+    max-height: 3.75rem;
+    max-width: 90%;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}

@@ -1,9 +1,29 @@
+import { useState, useEffect } from 'react';
 import "./Navbar.css";
 import logo from './assets/logo/Net_Prime_Plus_Max_Flix.png';
 
-export default function Navbar() {
+interface NavbarProps {
+    types: string[];
+    genres: string[];
+}
+
+
+export default function Navbar({ types, genres }: NavbarProps) {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 96);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <nav className="navbar navbar-expand-lg fixed-top navbar-light bg-light mb-5">
+        <nav className={`navbar navbar-expand-lg fixed-top mt-2  ${isScrolled ? 'navbar-light bg-light' : ''}`}>
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">
                     <img className="logo" src={logo} alt="Net Prime Plus Max Flix" />
@@ -14,29 +34,27 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <a className={`btn me-2 ${isScrolled ? 'btn-outline-dark' : 'btn-outline-light'}`} aria-current="page" href="#">Início</a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
-                        </li>
+                        {types.map((type) => (
+                            <li key={type} className="nav-item">
+                                <a className={`btn me-2 text-capitalize ${isScrolled ? 'btn-outline-dark' : 'btn-outline-light'}`} href={`#${type}`}>{type}</a>
+                            </li>
+                        ))}
                         <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                            <a className={`btn ${isScrolled ? 'btn-outline-dark' : 'btn-outline-light'}`} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider"></hr></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                {genres.map((genre) => (
+                                    <li key={genre}><a className="dropdown-item text-capitalize" href={`#${genre}`}>{genre}</a></li>
+                                ))}
                             </ul>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">Search</button>
+                        <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <button className="btn" type="submit">🔎</button>
                     </form>
                 </div>
             </div>

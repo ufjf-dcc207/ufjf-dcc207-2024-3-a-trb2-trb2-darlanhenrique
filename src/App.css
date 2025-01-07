@@ -58,6 +58,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-#top-space {
-  margin-top: 8rem;
+.top-space {
+  margin-top: 6rem;
 }

@@ -10,6 +10,8 @@
         padding-bottom: 10px;
         border-bottom: 2px solid #444;
         text-transform: capitalize;
+        scroll-margin-top: 5rem;
+
     }
     .productions {
         display: flex;

@@ -25,10 +25,10 @@ function App() {
   return (
     <div>
       <header className='mb-5'>
-        <Navbar />
+        <Navbar types={allTypes} genres={allGenres} />
       </header>
       
-      <div id="top-space"></div>
+      <div className="top-space"></div>
 
       {/* PARA AGRUPAR POR NOVAS PRODUÇÕES */}
       <Category key="new-productions" name="Novas Produçõe">
