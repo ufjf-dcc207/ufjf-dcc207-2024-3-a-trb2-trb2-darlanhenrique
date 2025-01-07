@@ -64,7 +64,6 @@
       "length": 50,
       "description": "Uma trama entre o mundo real e um reino fantástico.",
       "image": "Entre_Mundos.png",
-      "isNew": true,
       "indicativeClassification": 14,
       "isOriginal": true
     },
@@ -76,7 +75,6 @@
       "length": 70,
       "description": "Uma análise profunda sobre a mente e como as memórias moldam quem somos.",
       "image": "O_Fio_da_Memoria.jpg",
-      "isNew": true,
       "indicativeClassification": 14,
       "isOriginal": true
     },
@@ -88,6 +86,7 @@
       "length": 120,
       "description": "Uma aventura em uma cidade futurista cheia de conspirações e tecnologia.",
       "image": "Neon_City.jpg",
+      "isNew": true,
       "indicativeClassification": 16,
       "isOriginal": true
     },
@@ -144,7 +143,6 @@
       "length": 130,
       "description": "Hackers e conspirações em uma corrida para decifrar um código secreto.",
       "image": "Codigo_Infinito.png",
-      "isNew": true,
       "indicativeClassification": 14,
       "isOriginal": true
     },
@@ -167,6 +165,7 @@
       "length": 20,
       "description": "Histórias antigas de poder e batalhas em um mundo mágico.",
       "image": "Lendas_da_Eternidade.png",
+      "isNew": true,
       "indicativeClassification": 10,
       "isOriginal": true
     },

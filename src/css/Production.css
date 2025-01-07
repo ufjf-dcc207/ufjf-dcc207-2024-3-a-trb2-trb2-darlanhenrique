@@ -115,6 +115,12 @@
       }
     }
   }
+  .image_indicative {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 0.1rem;
+
+  }
 }
 
 .production:hover {
