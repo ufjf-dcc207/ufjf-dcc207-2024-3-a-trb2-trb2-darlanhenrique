@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import "./Navbar.css";
-import logo from './assets/logo/Net_Prime_Plus_Max_Flix.png';
+import "../css/Navbar.css";
+import logo from '../assets/logo/Net_Prime_Plus_Max_Flix.png';
 
 interface NavbarProps {
     types: string[];

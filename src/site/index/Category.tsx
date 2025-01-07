@@ -1,4 +1,4 @@
-import "./Category.css";
+import "../../css/Category.css";
 import { ReactNode } from "react";
 
 interface CategoryProps {

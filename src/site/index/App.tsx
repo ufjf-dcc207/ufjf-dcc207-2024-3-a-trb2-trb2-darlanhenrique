@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './App.css'
-import PRODUCTIONS from './Audiovisual_productions.json'
+import '../../css/App.css'
+import PRODUCTIONS from '../../database/Audiovisual_productions.json'
 import Category from './Category';
-import Production from './Production'
-import Navbar from './Navbar';
+import Production from './Production.tsx'
+import Navbar from '../../components/Navbar';
 
 const allGenres: string[] = Array.from(
   new Set(

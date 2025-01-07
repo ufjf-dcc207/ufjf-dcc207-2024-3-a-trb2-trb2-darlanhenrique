@@ -1,4 +1,4 @@
-import "./Production.css";
+import "../../css/Production.css";
 
 interface ProductionProps {
     name: string;
