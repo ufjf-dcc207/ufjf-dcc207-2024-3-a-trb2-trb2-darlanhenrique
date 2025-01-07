@@ -4,159 +4,193 @@
       "name": "Ecos do Amanhã",
       "year": 2023,
       "type": "série",
-      "genre": "ficção científica",
+      "genre": ["ficção científica"],
       "length": 45,
       "description": "Uma série sobre realidades paralelas e escolhas que alteram o futuro.",
       "image": "Ecos_do_Amanha.png",
-      "isNew": true
+      "isNew": true,
+      "indicativeClassification": 12,
+      "isOriginal": true
     },
     {
       "name": "Caminhos do Passado",
       "year": 2021,
       "type": "documentário",
-      "genre": "histórico",
+      "genre": ["histórico"],
       "length": 60,
       "description": "Explorando eventos históricos e suas repercussões no mundo moderno.",
-      "image": "Caminhos_do_Passado.png"
+      "image": "Caminhos_do_Passado.png",
+      "indicativeClassification": 0,
+      "isOriginal": true
     },
     {
       "name": "Sombras da Lua",
       "year": 2022,
       "type": "filme",
-      "genre": "thriller/psicológico",
+      "genre": ["thriller", "psicológico"],
       "length": 110,
       "description": "Um suspense envolvendo mistérios e segredos sob a luz da lua.",
-      "image": "Sombras_da_Lua.png"
+      "image": "Sombras_da_Lua.png",
+      "indicativeClassification": 16,
+      "isOriginal": true
     },
     {
       "name": "Ritmo de Amanhecer",
       "year": 2024,
       "type": "novela",
-      "genre": "romance/drama",
+      "genre": ["romance", "drama"],
       "length": 200,
       "description": "Histórias de amor, traição e segredos entrelaçados em uma pequena vila.",
-      "image": "Ritmo_de_Amanhecer.png"
+      "image": "Ritmo_de_Amanhecer.png",
+      "indicativeClassification": 12,
+      "isOriginal": true
     },
     {
       "name": "Astro Hunters",
       "year": 2023,
       "type": "anime",
-      "genre": "aventura/ficção científica",
+      "genre": ["aventura", "ficção científica"],
       "length": 24,
       "description": "Jovens caçadores de estrelas exploram galáxias em busca de mistérios celestiais.",
-      "image": "Astro_Hunters.png"
+      "image": "Astro_Hunters.png",
+      "indicativeClassification": 10,
+      "isOriginal": true
     },
     {
       "name": "Entre Mundos",
       "year": 2023,
       "type": "série",
-      "genre": "drama/fantasia",
+      "genre": ["drama", "fantasia"],
       "length": 50,
       "description": "Uma trama entre o mundo real e um reino fantástico.",
       "image": "Entre_Mundos.png",
-      "isNew": true
+      "isNew": true,
+      "indicativeClassification": 14,
+      "isOriginal": true
     },
     {
       "name": "O Fio da Memória",
       "year": 2022,
       "type": "documentário",
-      "genre": "psicológico",
+      "genre": ["psicológico"],
       "length": 70,
       "description": "Uma análise profunda sobre a mente e como as memórias moldam quem somos.",
       "image": "O_Fio_da_Memoria.jpg",
-      "isNew": true
+      "isNew": true,
+      "indicativeClassification": 14,
+      "isOriginal": true
     },
     {
       "name": "Neon City",
       "year": 2024,
       "type": "filme",
-      "genre": "ação/ficção científica",
+      "genre": ["ação", "ficção científica"],
       "length": 120,
       "description": "Uma aventura em uma cidade futurista cheia de conspirações e tecnologia.",
-      "image": "Neon_City.jpg"
+      "image": "Neon_City.jpg",
+      "indicativeClassification": 16,
+      "isOriginal": true
     },
     {
       "name": "O Último Guardião",
       "year": 2023,
       "type": "novela",
-      "genre": "aventura/ação",
+      "genre": ["aventura", "ação"],
       "length": 150,
       "description": "A busca por um artefato antigo coloca o destino do mundo em jogo.",
-      "image": "O_Ultimo_Guardiao.png"
+      "image": "O_Ultimo_Guardiao.png",
+      "indicativeClassification": 12,
+      "isOriginal": true
     },
     {
       "name": "Dimensões Esquecidas",
       "year": 2024,
       "type": "anime",
-      "genre": "mistério/ficção científica",
+      "genre": ["mistério", "ficção científica"],
       "length": 18,
       "description": "Personagens buscam respostas em realidades alternadas e perigosas.",
       "image": "Dimensoes_Esquecidas.png",
-      "isNew": true
+      "isNew": true,
+      "indicativeClassification": 14,
+      "isOriginal": true
     },
     {
       "name": "Planeta X",
       "year": 2022,
       "type": "documentário",
-      "genre": "científico/aventura",
+      "genre": ["científico", "aventura"],
       "length": 55,
       "description": "Explorando os mistérios de um planeta recentemente descoberto.",
-      "image": "Planeta_X.png"
+      "image": "Planeta_X.png",
+      "indicativeClassification": 0,
+      "isOriginal": true
     },
     {
       "name": "Cores da Eternidade",
       "year": 2023,
       "type": "série",
-      "genre": "romance/drama",
+      "genre": ["romance", "drama"],
       "length": 40,
       "description": "Uma história de encontros e reencontros ao longo da vida.",
-      "image": "Cores_da_Eternidade.png"
+      "image": "Cores_da_Eternidade.png",
+      "indicativeClassification": 10,
+      "isOriginal": true
     },
     {
       "name": "Código Infinito",
       "year": 2023,
       "type": "filme",
-      "genre": "ação/tecnologia",
+      "genre": ["ação", "tecnologia"],
       "length": 130,
       "description": "Hackers e conspirações em uma corrida para decifrar um código secreto.",
       "image": "Codigo_Infinito.png",
-      "isNew": true
+      "isNew": true,
+      "indicativeClassification": 14,
+      "isOriginal": true
     },
     {
       "name": "Reinos Ancestrais",
       "year": 2024,
       "type": "novela",
-      "genre": "aventura/épico",
+      "genre": ["aventura", "épico"],
       "length": 180,
       "description": "Uma saga envolvendo dinastias, batalhas e segredos antigos.",
-      "image": "Reinos_Ancestrais.png"
+      "image": "Reinos_Ancestrais.png",
+      "indicativeClassification": 12,
+      "isOriginal": true
     },
     {
       "name": "Lendas da Eternidade",
       "year": 2022,
       "type": "anime",
-      "genre": "fantasia/aventura",
+      "genre": ["fantasia", "aventura"],
       "length": 20,
       "description": "Histórias antigas de poder e batalhas em um mundo mágico.",
-      "image": "Lendas_da_Eternidade.png"
+      "image": "Lendas_da_Eternidade.png",
+      "indicativeClassification": 10,
+      "isOriginal": true
     },
     {
       "name": "Vortex Temporal",
       "year": 2023,
       "type": "documentário",
-      "genre": "científico/ficção",
+      "genre": ["científico", "ficção"],
       "length": 65,
       "description": "Explorando os conceitos da física através do espaço-tempo.",
-      "image": "Vortex_Temporal.png"
+      "image": "Vortex_Temporal.png",
+      "indicativeClassification": 12,
+      "isOriginal": true
     },
     {
       "name": "Estrondos do Horizonte",
       "year": 2023,
       "type": "série",
-      "genre": "aventura/drama",
+      "genre": ["aventura", "drama"],
       "length": 55,
       "description": "A luta por sobrevivência em um cenário pós-catástrofe.",
-      "image": "Estrondos_do_Horizonte.png"
+      "image": "Estrondos_do_Horizonte.png",
+      "indicativeClassification": 12,
+      "isOriginal": true
     }
   ]
 }

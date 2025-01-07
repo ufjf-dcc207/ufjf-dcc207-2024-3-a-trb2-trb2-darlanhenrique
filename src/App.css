@@ -19,16 +19,6 @@ body {
   padding-bottom: 0.5rem;
   
 
-  .logo {
-    grid-area: logo;
-    width: 3.5rem;
-    height: 3.5rem;
-    margin: 1rem auto;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-    transition: transform 0.3s ease;
-  }
 
   .logo:hover {
     transform: scale(1.1);
@@ -55,4 +45,19 @@ body {
     line-height: 1.5;
     text-align: center;
   }
+}
+
+.logo {
+  grid-area: logo;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 1rem auto;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#top-space {
+  margin-top: 8rem;
 }

@@ -17,10 +17,6 @@
         justify-content: center;
         margin-top: 10px;
         gap: 20px;
-        padding: 4px;
-        transition: all 0.3s ease;
-        max-height: 600px;
-        overflow-y: auto; 
     }
     .carousel-link {
         margin-top: 10px;
