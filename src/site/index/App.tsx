@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/App.css'
 import PRODUCTIONS from '../../database/Audiovisual_productions.json'
 import Category from './Category';
-import Production from './Production.tsx'
+import Production from './Production'
+import NewProduction from './NewProduction'
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -34,11 +35,11 @@ function App() {
       <main>
 
         {/* PARA AGRUPAR POR NOVAS PRODUÇÕES */}
-        <Category key="new-productions" name="Novas Produçõe">
+        <Category key="new-productions" name="Novas Produções">
           {PRODUCTIONS.audiovisual_productions
             .filter((production) => production.isNew)
             .map((production) => (
-              <Production
+              <NewProduction
                 key={production.name}
                 name={production.name}
                 year={production.year}
