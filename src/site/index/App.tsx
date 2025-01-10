@@ -42,7 +42,6 @@ function App() {
               <NewProduction
                 key={production.name}
                 name={production.name}
-                year={production.year}
                 type={production.type}
                 genre={production.genre}
                 length={production.length}
@@ -50,7 +49,7 @@ function App() {
                 image={production.image}
                 isNew={production.isNew}
                 classification={production.indicativeClassification}
-                isOriginal={production.isOriginal}
+                publish={production.publish}
               />
             ))}
         </Category>
@@ -63,7 +62,7 @@ function App() {
                   <Production
                     key={production.name}
                     name={production.name}
-                    year={production.year}
+                    year={production.year}    
                     type={production.type}
                     genre={production.genre}
                     length={production.length}
@@ -71,7 +70,7 @@ function App() {
                     image={production.image}
                     isNew={production.isNew}
                     classification={production.indicativeClassification}
-                    isOriginal={production.isOriginal}
+                    publish={production.publish}
                   />
                 ))}
           </Category>
@@ -85,7 +84,7 @@ function App() {
                 <Production
                   key={production.name}
                   name={production.name}
-                  year={production.year}
+                  year={production.year}    
                   type={production.type}
                   genre={production.genre}
                   length={production.length}
@@ -93,7 +92,7 @@ function App() {
                   image={production.image}
                   isNew={production.isNew}
                   classification={production.indicativeClassification}
-                  isOriginal={production.isOriginal}
+                  publish={production.publish}
                 />
               ))}
           </Category>

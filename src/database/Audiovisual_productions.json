@@ -8,9 +8,8 @@
       "length": 45,
       "description": "Uma série sobre realidades paralelas e escolhas que alteram o futuro.",
       "image": "Ecos_do_Amanha.png",
-      "isNew": true,
       "indicativeClassification": 12,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Caminhos do Passado",
@@ -21,7 +20,7 @@
       "description": "Explorando eventos históricos e suas repercussões no mundo moderno.",
       "image": "Caminhos_do_Passado.png",
       "indicativeClassification": 0,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Sombras da Lua",
@@ -31,8 +30,9 @@
       "length": 110,
       "description": "Um suspense envolvendo mistérios e segredos sob a luz da lua.",
       "image": "Sombras_da_Lua.png",
+      "isNew": true,
       "indicativeClassification": 16,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Ritmo de Amanhecer",
@@ -43,7 +43,7 @@
       "description": "Histórias de amor, traição e segredos entrelaçados em uma pequena vila.",
       "image": "Ritmo_de_Amanhecer.png",
       "indicativeClassification": 12,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Astro Hunters",
@@ -54,7 +54,7 @@
       "description": "Jovens caçadores de estrelas exploram galáxias em busca de mistérios celestiais.",
       "image": "Astro_Hunters.png",
       "indicativeClassification": 10,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Entre Mundos",
@@ -65,7 +65,7 @@
       "description": "Uma trama entre o mundo real e um reino fantástico.",
       "image": "Entre_Mundos.png",
       "indicativeClassification": 14,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "O Fio da Memória",
@@ -76,7 +76,7 @@
       "description": "Uma análise profunda sobre a mente e como as memórias moldam quem somos.",
       "image": "O_Fio_da_Memoria.jpg",
       "indicativeClassification": 14,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Neon City",
@@ -86,9 +86,8 @@
       "length": 120,
       "description": "Uma aventura em uma cidade futurista cheia de conspirações e tecnologia.",
       "image": "Neon_City.jpg",
-      "isNew": true,
       "indicativeClassification": 16,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "O Último Guardião",
@@ -99,7 +98,7 @@
       "description": "A busca por um artefato antigo coloca o destino do mundo em jogo.",
       "image": "O_Ultimo_Guardiao.png",
       "indicativeClassification": 12,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Dimensões Esquecidas",
@@ -110,7 +109,7 @@
       "description": "Personagens buscam respostas em realidades alternadas e perigosas.",
       "image": "Dimensoes_Esquecidas.png",
       "indicativeClassification": 14,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Planeta X",
@@ -120,8 +119,9 @@
       "length": 55,
       "description": "Explorando os mistérios de um planeta recentemente descoberto.",
       "image": "Planeta_X.png",
+      "isNew": true,
       "indicativeClassification": 0,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Cores da Eternidade",
@@ -132,7 +132,7 @@
       "description": "Uma história de encontros e reencontros ao longo da vida.",
       "image": "Cores_da_Eternidade.png",
       "indicativeClassification": 10,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Código Infinito",
@@ -143,7 +143,7 @@
       "description": "Hackers e conspirações em uma corrida para decifrar um código secreto.",
       "image": "Codigo_Infinito.png",
       "indicativeClassification": 14,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Reinos Ancestrais",
@@ -154,7 +154,7 @@
       "description": "Uma saga envolvendo dinastias, batalhas e segredos antigos.",
       "image": "Reinos_Ancestrais.png",
       "indicativeClassification": 12,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Lendas da Eternidade",
@@ -164,9 +164,8 @@
       "length": 20,
       "description": "Histórias antigas de poder e batalhas em um mundo mágico.",
       "image": "Lendas_da_Eternidade.png",
-      "isNew": true,
       "indicativeClassification": 10,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Vortex Temporal",
@@ -177,7 +176,7 @@
       "description": "Explorando os conceitos da física através do espaço-tempo.",
       "image": "Vortex_Temporal.png",
       "indicativeClassification": 12,
-      "isOriginal": true
+      "publish": "original"
     },
     {
       "name": "Estrondos do Horizonte",
@@ -188,7 +187,134 @@
       "description": "A luta por sobrevivência em um cenário pós-catástrofe.",
       "image": "Estrondos_do_Horizonte.png",
       "indicativeClassification": 18,
-      "isOriginal": true
+      "publish": "original"
+    },
+
+    {
+      "name": "Neon Genesis Evangelion",
+      "year": 1995,
+      "type": "anime",
+      "genre": ["ficção científica", "mecha"],
+      "length": 26,
+      "description": "Adolescentes pilotam robôs gigantes para salvar o mundo de seres misteriosos chamados Anjos.",
+      "image": "Neon_Genesis_Evangelion.png",
+      "isNew": true,
+      "publish": "Netflix",
+      "indicativeClassification": 16
+    },
+    {
+      "name": "Frieren",
+      "year": 2023,
+      "type": "anime",
+      "genre": ["fantasia", "drama"],
+      "length": 12,
+      "description": "A jornada de uma elfa imortal que reflete sobre sua vida após a derrota de um Rei Demônio.",
+      "image": "Frieren.png",
+      "isNew": true,
+      "publish": "Crunchyroll",
+      "indicativeClassification": 14
+    },
+    {
+      "name": "Fullmetal Alchemist: Brotherhood",
+      "year": 2009,
+      "type": "anime",
+      "genre": ["ação", "aventura"],
+      "length": 64,
+      "description": "Dois irmãos usam alquimia para tentar restaurar seus corpos após um ritual fracassado.",
+      "image": "Fullmetal_Alchemist_Brotherhood.png",
+      "publish": "Crunchyroll",
+      "indicativeClassification": 14
+    },
+    {
+      "name": "Clannad",
+      "year": 2007,
+      "type": "anime",
+      "genre": ["drama", "romance"],
+      "length": 23,
+      "description": "Uma história emocionante sobre amor, amizade e a importância da família.",
+      "image": "Clannad.png",
+      "publish": "Crunchyroll",
+      "indicativeClassification": 10
+    },
+    {
+      "name": "Final Fantasy 7: Advent Children",
+      "year": 2005,
+      "type": "filme",
+      "genre": ["ação", "fantasia"],
+      "length": 101,
+      "description": "Uma continuação do jogo Final Fantasy 7, mostrando Cloud lutando para salvar o planeta.",
+      "image": "Final_Fantasy_7_Advent_Children.png",
+      "isNew": true,
+      "publish": "Prime Video",
+      "indicativeClassification": 12
+    },
+    {
+      "name": "À Espera de um Milagre",
+      "year": 1999,
+      "type": "filme",
+      "genre": ["drama", "fantasia"],
+      "length": 189,
+      "description": "A história de um guarda prisional e um prisioneiro com habilidades sobrenaturais.",
+      "image": "A_Espera_de_um_Milagre.png",
+      "publish": "Prime Video",
+      "indicativeClassification": 14
+    },
+    {
+      "name": "Titanic",
+      "year": 1997,
+      "type": "filme",
+      "genre": ["romance", "drama"],
+      "length": 195,
+      "description": "Uma história de amor trágica a bordo do navio Titanic.",
+      "image": "Titanic.png",
+      "publish": "Disney+",
+      "indicativeClassification": 12
+    },
+    {
+      "name": "Deadpool",
+      "year": 2016,
+      "type": "filme",
+      "genre": ["ação", "comédia"],
+      "length": 108,
+      "description": "O anti-herói irreverente Deadpool busca vingança contra quem arruinou sua vida.",
+      "image": "Deadpool.png",
+      "publish": "Disney+",
+      "indicativeClassification": 18
+    },
+    {
+      "name": "Round 6",
+      "year": 2021,
+      "type": "série",
+      "genre": ["suspense", "drama"],
+      "length": 9,
+      "description": "Concorrentes endividados competem em jogos mortais por um prêmio milionário.",
+      "image": "Round_6.png",
+      "isNew": true,
+      "publish": "Netflix",
+      "indicativeClassification": 18
+    },
+    {
+      "name": "A Favorita",
+      "year": 2008,
+      "type": "novela",
+      "genre": ["drama", "mistério"],
+      "length": 197,
+      "description": "Um mistério envolvendo duas mulheres e a verdade sobre um crime.",
+      "image": "A_Favorita.png",
+      "isNew": true,
+      "publish": "Globoplay",
+      "indicativeClassification": 12
+    },
+    {
+      "name": "Caminho das Índias",
+      "year": 2009,
+      "type": "novela",
+      "genre": ["romance", "drama"],
+      "length": 203,
+      "description": "Um romance entre diferentes culturas na Índia e no Brasil.",
+      "image": "Caminho_das_Indias.png",
+      "publish": "Globoplay",
+      "indicativeClassification": 12
     }
   ]
 }

@@ -9,12 +9,11 @@ interface ProductionProps {
     image: string;
     isNew?: boolean;
     classification: number;
-    isOriginal?: boolean;
+    publish?: string;
 }
 
-export default function Production({ name, type, genre, length, description, image, isNew, classification, isOriginal }: ProductionProps) {
-    // console.log("Production props:", { name, type, genre, length, description, image, isNew, classification, isOriginal });
-
+export default function Production({ name, type, genre, length, description, image, isNew, classification, publish }: ProductionProps) {
+    
     function getClassificationLabel(classification: number): string {
         let classificationLabel: string;
         switch (classification) {
@@ -46,8 +45,8 @@ export default function Production({ name, type, genre, length, description, ima
     let classificationLabel = getClassificationLabel(classification);
 
     return (
-        <div className="new_production -mx-4" style={{ display: "flex", height: "85vh" }}>
-            <div className="new_production_details" style={{ width: "60%" }}>
+        <div className="new_production -mx-4" style={{ display: "flex", height: "85vh", backgroundColor: "#00050d" }}>
+            <div className="new_production_details" style={{ width: "60%" }} >
                 {isNew && <div className="new">{type === "série" || type === "novela" ? "Nova" : " Novo"} {type}</div>}
 
                 <div className="new_name">{name}</div>
@@ -74,7 +73,13 @@ export default function Production({ name, type, genre, length, description, ima
             </div>
 
             <div className="new_production_image" style={{ backgroundImage: `url(./img/productions/${image})` }}>
-                {isOriginal && <div className="original">Original</div>}
+                {publish === "original" && <div className="new_original" style={{ backgroundColor: "#f41246" }}>Original</div>}
+                {publish === "Netflix" && <div className="new_original" style={{ backgroundColor: "rgb(229,9,20)" }}>Netflix</div>}
+                {publish === "Globoplay" && <div className="new_original" style={{ background: "linear-gradient(87.96deg, rgb(251, 2, 52) 34.05%, rgb(255, 143, 1) 99.97%)" }} >GloboPlay</div>}
+                {publish === "Prime Video" && <div className="new_original" style={{ backgroundColor: "#1399FF" }}>Amazon Prime</div>}
+                {publish === "Disney+" && <div className="new_original" style={{ backgroundColor: "#02d6e8" }}>Disney+</div>}
+                {publish === "Crunchyroll" && <div className="new_original" style={{ backgroundColor: "#ff640a" }}>Crunchyroll</div>}
+                
                 <div className="indicative-classification">
                     <span className="classification">
                         <img className="new_image_indicative" src={`./img/indicative/${classificationLabel}.png`} alt={name} />

@@ -11,12 +11,11 @@ export default function Category({ name, type, children: productions }: Category
     const productionArray = React.Children.toArray(productions);
 
     if (name === "Novas Produções") {
-        // console.log("Category props:", { name, type, productionArray });
         return (
             <div className="category mt-5">
-                <div id="NewProductionCarousel" className="carousel slide">
+                <div id="NewProductionCarousel" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
-                        {productionArray.map((production, index) => (
+                        {productionArray.map((_, index) => (
                             <button
                                 key={index}
                                 type="button"
@@ -30,17 +29,14 @@ export default function Category({ name, type, children: productions }: Category
                     </div>
                     <div className="carousel-inner">
                         {productionArray.map((production, index) => (
-                            <div
-                                className={`carousel-item ${index === 0 ? "active" : ""}`}
-                                key={React.isValidElement(production) ? production.props.name : index}
-                            >
+                            <div className={`carousel-item ${index === 0 ? "active" : ""}`} key={React.isValidElement(production) ? production.props.name : index}>
                                 {production}
                             </div>
                         ))}
                     </div>
 
                     <button
-                        className="carousel-control-prev"
+                        className="carousel-control-prev -ms-8 new_carrousel_button"
                         type="button"
                         data-bs-target="#NewProductionCarousel"
                         data-bs-slide="prev"
@@ -49,7 +45,7 @@ export default function Category({ name, type, children: productions }: Category
                         <span className="visually-hidden">Previous</span>
                     </button>
                     <button
-                        className="carousel-control-next"
+                        className="carousel-control-next -me-8 new_carrousel_button"
                         type="button"
                         data-bs-target="#NewProductionCarousel"
                         data-bs-slide="next"
