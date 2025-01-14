@@ -4,10 +4,10 @@ interface SearchFilterProps {
     onClose: () => void;
     types: string[];
     genres: string[];
-    streamService: string[];
+    streamServices: string[];
 }
 
-export default function SearchFilter({ onClose, types, genres, streamService }: SearchFilterProps) {
+export default function SearchFilter({ onClose, types, genres, streamServices }: SearchFilterProps) {
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -19,7 +19,7 @@ export default function SearchFilter({ onClose, types, genres, streamService }: 
                     </div>
                 </div>
                 <div className="filters">
-                    <a className="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseGenre" aria-expanded="false" aria-controls="collapseGenre">
+                    <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseGenre" aria-expanded="false" aria-controls="collapseGenre">
                         Gênero
                     </a>
                     <div style={{ minHeight: 20 }}>
@@ -35,7 +35,7 @@ export default function SearchFilter({ onClose, types, genres, streamService }: 
                         </div>
                     </div>
 
-                    <a className="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapseType" aria-expanded="false" aria-controls="collapseType">
+                    <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseType" aria-expanded="false" aria-controls="collapseType">
                         Tipo
                     </a>
                     <div style={{ minHeight: 20 }}>
@@ -50,17 +50,20 @@ export default function SearchFilter({ onClose, types, genres, streamService }: 
                             </div>
                         </div>
                     </div>
-                    <h3>Publicação</h3>
-                    <div>
-                        <label>
-                            <input type="radio" name="streamService" value="all" /> Todas
-                        </label>
-                        <label>
-                            <input type="radio" name="streamService" value="globoplay" /> Globoplay
-                        </label>
-                        <label>
-                            <input type="radio" name="streamService" value="netflix" /> Netflix
-                        </label>
+                    <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseStreamSerice" aria-expanded="false" aria-controls="collapseStreamSerice">
+                        Serviço de Streaming
+                    </a>
+                    <div style={{ minHeight: 20 }}>
+                        <div className="collapse collapse-horizontal" id="collapseStreamSerice">
+                            <div className="row d-flex justify-content-center align-items-center">                            
+                                {streamServices.map((streamService, index) => (
+                                    <div key={streamService} className="form-check form-check-inline col-3 d-flex align-items-center">
+                                        <input className="form-check-input " type="radio" name="flexRadiotype" id={`flexRadio${streamService}${index}`} value={streamService} />
+                                        <label className="form-check-label text-capitalize mt-2 ms-1" htmlFor={`flexRadio${streamService}${index}`}>{streamService}</label>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <button className="apply-button">Aplicar Filtros</button>

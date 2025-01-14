@@ -22,7 +22,7 @@ const allTypes: string[] = Array.from(
   )
 );
 
-const streamService: string[] = Array.from(
+const streamServices: string[] = Array.from(
   new Set(
     PRODUCTIONS.audiovisual_productions
       .map((production) => production.streamService.trim())
@@ -34,7 +34,7 @@ function App() {
   return (
     <div>
       <header className='mb-5'>
-        <Navbar types={allTypes} genres={allGenres} streamService={streamService} />
+        <Navbar types={allTypes} genres={allGenres} streamServices={streamServices} />
       </header>
 
 

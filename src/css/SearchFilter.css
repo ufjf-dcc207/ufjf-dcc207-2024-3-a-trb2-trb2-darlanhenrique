@@ -1,4 +1,4 @@
-/* Estilos gerais para o modal */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -23,7 +23,6 @@
     animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Animação para o modal */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -35,7 +34,6 @@
     }
 }
 
-/* Botão de fechar */
 .close-button {
     position: absolute;
     top: 10px;
@@ -51,7 +49,6 @@
     color: #ff0000;
 }
 
-/* Barra de pesquisa */
 .search-bar {
     margin-bottom: 20px;
 }
@@ -65,7 +62,6 @@
     box-sizing: border-box;
 }
 
-/* Filtros */
 .filters {
     margin-top: 20px;
 }
@@ -92,7 +88,6 @@
     margin-right: 10px;
 }
 
-/* Botão de aplicar */
 .apply-button {
     display: block;
     width: 100%;

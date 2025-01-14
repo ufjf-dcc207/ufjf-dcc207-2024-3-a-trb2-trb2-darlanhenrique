@@ -5,11 +5,11 @@ import SearchFilter from './SearchFilter';
 interface NavbarProps {
     types: string[];
     genres: string[];
-    streamService: string[]; 
+    streamServices: string[]; 
 }
 
 
-export default function Navbar({ types, genres, streamService }: NavbarProps) {
+export default function Navbar({ types, genres, streamServices }: NavbarProps) {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -62,7 +62,7 @@ export default function Navbar({ types, genres, streamService }: NavbarProps) {
                         <button className="btn" onClick={handleModalOpen}>🔎</button>
                     </div>
 
-                    {isModalOpen && <SearchFilter onClose={handleModalClose} types={types} genres={genres} streamService={streamService} />}
+                    {isModalOpen && <SearchFilter onClose={handleModalClose} types={types} genres={genres} streamServices={streamServices} />}
 
                 </div>
             </div>
