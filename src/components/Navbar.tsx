@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react';
 import "../css/Navbar.css";
 import logo from '../assets/logo/Net_Prime_Plus_Max_Flix.png';
-
+import SearchFilter from './SearchFilter';
 interface NavbarProps {
     types: string[];
     genres: string[];
+    streamService: string[]; 
 }
 
 
-export default function Navbar({ types, genres }: NavbarProps) {
+export default function Navbar({ types, genres, streamService }: NavbarProps) {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleModalOpen = () => setIsModalOpen(true);
+    const handleModalClose = () => setIsModalOpen(false);
 
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -52,10 +58,12 @@ export default function Navbar({ types, genres }: NavbarProps) {
                             </ul>
                         </li>
                     </ul>
-                    <form className="d-flex" role="search">
-                        <input className="form-control" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn" type="submit">🔎</button>
-                    </form>
+                    <div className="d-flex" role="search">
+                        <button className="btn" onClick={handleModalOpen}>🔎</button>
+                    </div>
+
+                    {isModalOpen && <SearchFilter onClose={handleModalClose} types={types} genres={genres} streamService={streamService} />}
+
                 </div>
             </div>
         </nav>

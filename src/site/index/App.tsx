@@ -22,12 +22,19 @@ const allTypes: string[] = Array.from(
   )
 );
 
+const streamService: string[] = Array.from(
+  new Set(
+    PRODUCTIONS.audiovisual_productions
+      .map((production) => production.streamService.trim())
+  )
+);
+
 
 function App() {
   return (
     <div>
       <header className='mb-5'>
-        <Navbar types={allTypes} genres={allGenres} />
+        <Navbar types={allTypes} genres={allGenres} streamService={streamService} />
       </header>
 
 
@@ -49,7 +56,7 @@ function App() {
                 image={production.image}
                 isNew={production.isNew}
                 classification={production.indicativeClassification}
-                publish={production.publish}
+                streamService={production.streamService}
               />
             ))}
         </Category>
@@ -70,7 +77,7 @@ function App() {
                     image={production.image}
                     isNew={production.isNew}
                     classification={production.indicativeClassification}
-                    publish={production.publish}
+                    streamService={production.streamService}
                   />
                 ))}
           </Category>
@@ -92,7 +99,7 @@ function App() {
                   image={production.image}
                   isNew={production.isNew}
                   classification={production.indicativeClassification}
-                  publish={production.publish}
+                  streamService={production.streamService}
                 />
               ))}
           </Category>

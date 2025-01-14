@@ -10,10 +10,10 @@ interface ProductionProps {
     image: string;
     isNew?: boolean;
     classification: number;
-    publish: string;
+    streamService: string;
 }
 
-export default function Production({name, year, type, genre, length, description, image, isNew, classification, publish}: ProductionProps) {
+export default function Production({name, year, type, genre, length, description, image, isNew, classification, streamService}: ProductionProps) {
 
     function getClassificationLabel(classification: number): string {
         let classificationLabel: string;
@@ -50,12 +50,12 @@ export default function Production({name, year, type, genre, length, description
         <div className="image-container">
             <img className="image" src={`./img/productions/${image}`} alt={name} />
             {isNew && <div className="new">{type === "série" || type === "novela" ? "Nova" : " Novo"} {type}</div>}
-            {publish == "original" && <div className="original">Original</div>}
-            {publish === "Netflix" && <div className="original" style={{ backgroundColor: "rgb(229,9,20)" }}>Netflix</div>}
-            {publish === "Globoplay" && <div className="original" style={{ background: "linear-gradient(87.96deg, rgb(251, 2, 52) 34.05%, rgb(255, 143, 1) 99.97%)" }} >GloboPlay</div>}
-            {publish === "Prime Video" && <div className="original" style={{ backgroundColor: "#1399FF" }}>Prime</div>}
-            {publish === "Disney+" && <div className="original" style={{ backgroundColor: "#02d6e8" }}>Disney+</div>}
-            {publish === "Crunchyroll" && <div className="original" style={{ backgroundColor: "#ff640a" }}>Crunchyroll</div>}
+            {streamService == "original" && <div className="original">Original</div>}
+            {streamService === "Netflix" && <div className="original" style={{ backgroundColor: "rgb(229,9,20)" }}>Netflix</div>}
+            {streamService === "Globoplay" && <div className="original" style={{ background: "linear-gradient(87.96deg, rgb(251, 2, 52) 34.05%, rgb(255, 143, 1) 99.97%)" }} >GloboPlay</div>}
+            {streamService === "Prime Video" && <div className="original" style={{ backgroundColor: "#1399FF" }}>Prime</div>}
+            {streamService === "Disney+" && <div className="original" style={{ backgroundColor: "#02d6e8" }}>Disney+</div>}
+            {streamService === "Crunchyroll" && <div className="original" style={{ backgroundColor: "#ff640a" }}>Crunchyroll</div>}
         </div>
         <div className="details">
             <div className="name">{name}</div>
