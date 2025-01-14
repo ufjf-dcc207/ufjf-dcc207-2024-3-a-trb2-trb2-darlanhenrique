@@ -22,7 +22,7 @@ export default function SearchFilter({ onClose, types, genres, streamServices }:
                     <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseGenre" aria-expanded="false" aria-controls="collapseGenre">
                         Gênero
                     </a>
-                    <div style={{ minHeight: 20 }}>
+                    <div style={{ minHeight: 0 }}>
                         <div className="collapse collapse-horizontal" id="collapseGenre">
                             <div className="row d-flex justify-content-center align-items-center">                            
                                 {genres.map((genre) => (
@@ -38,7 +38,7 @@ export default function SearchFilter({ onClose, types, genres, streamServices }:
                     <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseType" aria-expanded="false" aria-controls="collapseType">
                         Tipo
                     </a>
-                    <div style={{ minHeight: 20 }}>
+                    <div style={{ minHeight: 0 }}>
                         <div className="collapse collapse-horizontal" id="collapseType">
                             <div className="row d-flex justify-content-center align-items-center">                            
                                 {types.map((type, index) => (
@@ -53,7 +53,7 @@ export default function SearchFilter({ onClose, types, genres, streamServices }:
                     <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseStreamSerice" aria-expanded="false" aria-controls="collapseStreamSerice">
                         Serviço de Streaming
                     </a>
-                    <div style={{ minHeight: 20 }}>
+                    <div style={{ minHeight: 0 }}>
                         <div className="collapse collapse-horizontal" id="collapseStreamSerice">
                             <div className="row d-flex justify-content-center align-items-center">                            
                                 {streamServices.map((streamService, index) => (

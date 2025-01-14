@@ -18,6 +18,8 @@
     padding: 20px;
     width: 90%;
     max-width: 600px;
+    max-height: 90vh; 
+    overflow-y: auto; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
@@ -103,4 +105,33 @@
 
 .apply-button:hover {
     background-color: #0056b3;
+}
+.collapseTitle {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.collapseTitle:hover {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.collapseTitle:active {
+    transform: scale(0.98);
+}
+
+.collapseTitle[aria-expanded="true"] {
+    background-color: #0056b3;
+    color: #fff;
 }
