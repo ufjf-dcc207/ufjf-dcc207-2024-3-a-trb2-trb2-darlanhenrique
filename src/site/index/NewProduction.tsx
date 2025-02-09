@@ -1,4 +1,5 @@
 import "../../css/NewProduction.css";
+import { getClassificationLabel } from "../../utils/utils";
 
 interface ProductionProps {
     name: string;
@@ -13,35 +14,6 @@ interface ProductionProps {
 }
 
 export default function Production({ name, type, genre, length, description, image, isNew, classification, streamService }: ProductionProps) {
-    
-    function getClassificationLabel(classification: number): string {
-        let classificationLabel: string;
-        switch (classification) {
-            case 0:
-                classificationLabel = "free";
-                break;
-            case 10:
-                classificationLabel = "ten_years";
-                break;
-            case 12:
-                classificationLabel = "twelve_years";
-                break;
-            case 14:
-                classificationLabel = "fourteen_years";
-                break;
-            case 16:
-                classificationLabel = "sixteen_years";
-                break;
-            case 18:
-                classificationLabel = "eighteen_years";
-                break;
-            default:
-                classificationLabel = "free";
-                break;
-        }
-        return classificationLabel;
-    }
-
     let classificationLabel = getClassificationLabel(classification);
 
     return (
@@ -79,7 +51,7 @@ export default function Production({ name, type, genre, length, description, ima
                 {streamService === "Prime Video" && <div className="new_original" style={{ backgroundColor: "#1399FF" }}>Amazon Prime</div>}
                 {streamService === "Disney+" && <div className="new_original" style={{ backgroundColor: "#02d6e8" }}>Disney+</div>}
                 {streamService === "Crunchyroll" && <div className="new_original" style={{ backgroundColor: "#ff640a" }}>Crunchyroll</div>}
-                
+
                 <div className="indicative-classification">
                     <span className="classification">
                         <img className="new_image_indicative" src={`./img/indicative/${classificationLabel}.png`} alt={name} />
