@@ -32,6 +32,7 @@ export default function Main({ productions, filterName, onProductionClick }: Mai
                                 isNew={production.isNew}
                                 classification={production.indicativeClassification}
                                 streamService={production.streamService}
+                                onClick={() => onProductionClick(production)}
                             />
                         ))}
                 </Category>

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useReducer } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../css/App.css';
 import PRODUCTIONS from '../../database/Audiovisual_productions.json';
@@ -7,6 +7,7 @@ import Footer from '../../components/Footer';
 import Main from './Main';
 import ProductionDetailsPage from '../production/ProductionDetailsPage';
 
+// Pega todos os gêneros, tipos e serviços de streaming
 const allGenres: string[] = Array.from(
   new Set(
     PRODUCTIONS.audiovisual_productions
@@ -26,49 +27,119 @@ const streamServices: string[] = Array.from(
   )
 );
 
-function App() {
-  const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
-  const [selectedType, setSelectedType] = useState<string | null>(null);
-  const [selectedStreamService, setSelectedStreamService] = useState<string | null>(null);
-  const [searchFilters, setSearchFilters] = useState<{
-    search: string;
-    genres: string[];
-    type: string | null;
-    streamService: string | null;
-  }>({
+// Define um estado inicial
+const initialState = {
+  selectedGenre: null,
+  selectedType: null,
+  selectedStreamService: null,
+  searchFilters: {
     search: "",
     genres: [],
     type: null,
     streamService: null,
-  });
-  const [selectedProduction, setSelectedProduction] = useState<any | null>(null);
-  const [isDetailsPage, setIsDetailsPage] = useState(false);
+  },
+  selectedProduction: null,
+  isDetailsPage: false,
+};
+
+// Define o reducer
+function appReducer(state: any, action: any) {
+  switch (action.type) {
+    case "SET_GENRE":
+      return {
+        ...state,
+        selectedGenre: action.payload,
+        selectedType: null,
+        selectedStreamService: null,
+        searchFilters: {
+          search: "",
+          genres: [],
+          type: null,
+          streamService: null,
+        },
+        isDetailsPage: false,
+      };
+    case "SET_TYPE":
+      return {
+        ...state,
+        selectedGenre: null,
+        selectedType: action.payload,
+        selectedStreamService: null,
+        searchFilters: {
+          search: "",
+          genres: [],
+          type: null,
+          streamService: null,
+        },
+        isDetailsPage: false,
+      };
+    case "SET_STREAM_SERVICE":
+      return {
+        ...state,
+        selectedGenre: null,
+        selectedType: null,
+        selectedStreamService: action.payload,
+        searchFilters: {
+          search: "",
+          genres: [],
+          type: null,
+          streamService: null,
+        },
+        isDetailsPage: false,
+      };
+    case "SET_SEARCH_FILTERS":
+      return {
+        ...state,
+        searchFilters: action.payload,
+        isDetailsPage: false,
+      };
+    case "SET_PRODUCTION_DETAILS":
+      return {
+        ...state,
+        selectedProduction: action.payload,
+        isDetailsPage: true,
+      };
+    case "RESET_FILTERS":
+      return {
+        ...state,
+        selectedGenre: null,
+        selectedType: null,
+        selectedStreamService: null,
+        searchFilters: {
+          search: "",
+          genres: [],
+          type: null,
+          streamService: null,
+        },
+        isDetailsPage: false,
+      };
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = useReducer(appReducer, initialState);
 
   // Função para gerar o filterName dinamicamente
   const generateFilterName = () => {
-    if (selectedGenre) {
-      return `Gênero: ${selectedGenre}`;
-    }
-    if (selectedType) {
-      return `Tipo: ${selectedType}`;
-    }
-    if (selectedStreamService) {
-      return `Serviço: ${selectedStreamService}`;
-    }
+    if (state.selectedGenre) 
+      return `Gênero: ${state.selectedGenre}`;
+    if (state.selectedType) 
+      return `Tipo: ${state.selectedType}`;
+    if (state.selectedStreamService) 
+      return `Serviço: ${state.selectedStreamService}`;
 
     const filters: string[] = [];
-    if (searchFilters.search) {
-      filters.push(`Nome: ${searchFilters.search}`);
-    }
-    if (searchFilters.genres.length > 0) {
-      filters.push(`Gênero: ${searchFilters.genres.join(", ")}`);
-    }
-    if (searchFilters.type) {
-      filters.push(`Tipo: ${searchFilters.type}`);
-    }
-    if (searchFilters.streamService) {
-      filters.push(`Serviço: ${searchFilters.streamService}`);
-    }
+
+    if (state.searchFilters.search)
+      filters.push(`Nome: ${state.searchFilters.search}`);
+    if (state.searchFilters.genres.length > 0)
+      filters.push(`Gênero: ${state.searchFilters.genres.join(", ")}`);
+    if (state.searchFilters.type)
+      filters.push(`Tipo: ${state.searchFilters.type}`);
+    if (state.searchFilters.streamService)
+      filters.push(`Serviço: ${state.searchFilters.streamService}`);
 
     return filters.length > 0 ? `Pesquisa: ${filters.join(", ")}` : "Produções Recomendadas";
   };
@@ -77,55 +148,37 @@ function App() {
 
   const filteredProductions = PRODUCTIONS.audiovisual_productions.filter((production) => {
     const matchesGenre =
-      selectedGenre || searchFilters.genres.length > 0
-        ? (selectedGenre ? production.genre.map((g) => g.trim()).includes(selectedGenre) : true) &&
-          searchFilters.genres.every((genre) => production.genre.map((g) => g.trim()).includes(genre))
+      state.selectedGenre || state.searchFilters.genres.length > 0
+        ? (state.selectedGenre ? production.genre.map((g) => g.trim()).includes(state.selectedGenre) : true) &&
+          state.searchFilters.genres.every((genre: string) => production.genre.map((g) => g.trim()).includes(genre))
         : true;
 
     const matchesType =
-      selectedType || searchFilters.type
-        ? (selectedType ? production.type.trim() === selectedType : true) &&
-          (searchFilters.type ? production.type.trim() === searchFilters.type : true)
+      state.selectedType || state.searchFilters.type
+        ? (state.selectedType ? production.type.trim() === state.selectedType : true) &&
+          (state.searchFilters.type ? production.type.trim() === state.searchFilters.type : true)
         : true;
 
     const matchesStreamService =
-      selectedStreamService || searchFilters.streamService
-        ? (selectedStreamService ? production.streamService.trim() === selectedStreamService : true) &&
-          (searchFilters.streamService ? production.streamService.trim() === searchFilters.streamService : true)
+      state.selectedStreamService || state.searchFilters.streamService
+        ? (state.selectedStreamService ? production.streamService.trim() === state.selectedStreamService : true) &&
+          (state.searchFilters.streamService ? production.streamService.trim() === state.searchFilters.streamService : true)
         : true;
 
     const matchesSearch =
-      searchFilters.search.trim() !== ""
-        ? production.name.toLowerCase().includes(searchFilters.search.toLowerCase())
+      state.searchFilters.search.trim() !== ""
+        ? production.name.toLowerCase().includes(state.searchFilters.search.toLowerCase())
         : true;
 
     return matchesGenre && matchesType && matchesStreamService && matchesSearch;
   });
 
-  // Função para abrir a página de detalhes
   const handleProductionClick = (production: any) => {
-    setSelectedProduction(production);
-    setIsDetailsPage(true);
+    dispatch({ type: "SET_PRODUCTION_DETAILS", payload: production });
   };
 
-  // Função para voltar à lista de produções
   const handleBackToList = () => {
-    setSelectedProduction(null);
-    setIsDetailsPage(false);
-  };
-
-  // Função para resetar todos os filtros
-  const resetFilters = () => {
-    setSelectedGenre(null);
-    setSelectedType(null);
-    setSelectedStreamService(null);
-    setSearchFilters({
-      search: "",
-      genres: [],
-      type: null,
-      streamService: null,
-    });
-    handleBackToList(); // Volta à lista de produções
+    dispatch({ type: "RESET_FILTERS" });
   };
 
   return (
@@ -135,53 +188,17 @@ function App() {
           types={allTypes}
           genres={allGenres}
           streamServices={streamServices}
-          onGenreSelect={(genre) => {
-            setSelectedGenre(genre);
-            setSelectedType(null);
-            setSelectedStreamService(null);
-            setSearchFilters({
-              search: "",
-              genres: [],
-              type: null,
-              streamService: null,
-            });
-            handleBackToList();
-          }}
-          onTypeSelect={(type) => {
-            setSelectedType(type);
-            setSelectedGenre(null);
-            setSelectedStreamService(null);
-            setSearchFilters({
-              search: "",
-              genres: [],
-              type: null,
-              streamService: null,
-            });
-            handleBackToList();
-          }}
-          onStreamServiceSelect={(streamService) => {
-            setSelectedStreamService(streamService);
-            setSelectedGenre(null);
-            setSelectedType(null);
-            setSearchFilters({
-              search: "",
-              genres: [],
-              type: null,
-              streamService: null,
-            });
-            handleBackToList();
-          }}
-          onSearch={(filters) => {
-            setSearchFilters(filters);
-            handleBackToList();
-          }}
+          onGenreSelect={(genre) => dispatch({ type: "SET_GENRE", payload: genre })}
+          onTypeSelect={(type) => dispatch({ type: "SET_TYPE", payload: type })}
+          onStreamServiceSelect={(streamService) => dispatch({ type: "SET_STREAM_SERVICE", payload: streamService })}
+          onSearch={(filters) => dispatch({ type: "SET_SEARCH_FILTERS", payload: filters })}
         />
       </header>
       <div className="top-space"></div>
       <main>
-        {isDetailsPage ? (
+        {state.isDetailsPage ? (
           <ProductionDetailsPage
-            production={selectedProduction}
+            production={state.selectedProduction}
             onBackToList={handleBackToList}
           />
         ) : (

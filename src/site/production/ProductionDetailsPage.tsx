@@ -7,12 +7,8 @@ interface ProductionDetailsPageProps {
 }
 
 export default function ProductionDetailsPage({ production, onBackToList }: ProductionDetailsPageProps) {
-    if (!production) {
-        return <div>Carregando...</div>;
-    }
-    const classificationLabel = getClassificationLabel(production.classification);
-    console.log(production);
-
+    const classificationLabel = getClassificationLabel(production.indicativeClassification);
+    
     return (
         <div className="production-details-page" key={production.id}>
             {/* Banner */}
@@ -23,7 +19,7 @@ export default function ProductionDetailsPage({ production, onBackToList }: Prod
                         <span className="production-classification">
                             <img
                                 className="production-image-indicative"
-                                src={`./public/img/indicative/${classificationLabel}.png`}
+                                src={`./img/indicative/${classificationLabel}.png`}
                                 alt={`${classificationLabel} classification`}
                             />
                         </span>

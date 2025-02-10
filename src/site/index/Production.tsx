@@ -47,7 +47,7 @@ export default function Production({ id, name, year, type, genres, length, descr
                 <div className="production_genre">
                     {genres.map((genreItem) => (
                         <span key={genreItem} className="genre-item">
-                            <a className="me-1" href={`#${genreItem}`}>{genreItem.trim()}</a>
+                            <a className="me-1">{genreItem.trim()}</a>
                         </span>
                     ))}
                 </div>

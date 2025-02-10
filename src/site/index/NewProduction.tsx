@@ -12,13 +12,14 @@ interface ProductionProps {
     isNew?: boolean;
     classification: number;
     streamService?: string;
+    onClick?: () => void;
 }
 
-export default function Production({ name, type, genre, length, description, image, isNew, classification, streamService }: ProductionProps) {
+export default function Production({ name, type, genre, length, description, image, isNew, classification, streamService, onClick }: ProductionProps) {
     let classificationLabel = getClassificationLabel(classification);
 
     return (
-        <div className="new_production -mx-4" style={{ display: "flex", height: "85vh", backgroundColor: "#00050d" }}>
+        <div className="new_production -mx-4" style={{ display: "flex", height: "85vh", backgroundColor: "#00050d" }} onClick={onClick}>
             <div className="new_production_details" style={{ width: "60%" }} >
                 {isNew && <div className="new">{type === "série" || type === "novela" ? "Nova" : " Novo"} {type}</div>}
 
@@ -39,7 +40,7 @@ export default function Production({ name, type, genre, length, description, ima
                 <div className="new_genre">
                     {genre.map((genreItem) => (
                         <span key={genreItem} className="new_genre-item">
-                            <a className="me-1" href={`#${genreItem}`}>{genreItem.trim()}</a>
+                            <a className="me-1">{genreItem.trim()}</a>
                         </span>
                     ))}
                 </div>
