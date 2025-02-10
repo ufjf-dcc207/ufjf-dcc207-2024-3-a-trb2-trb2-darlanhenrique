@@ -108,11 +108,11 @@
 
 .production_year,
 .production_length {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .production_description {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   line-clamp: 5;
