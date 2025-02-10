@@ -6,38 +6,37 @@ interface SearchFilterProps {
     types: string[];
     genres: string[];
     streamServices: string[];
+    onSearch: (filters: {
+        search: string;
+        genres: string[];
+        type: string | null;
+        streamService: string | null;
+    }) => void;
 }
-export default function SearchFilter({ onClose, types, genres, streamServices }: SearchFilterProps) {
+
+export default function SearchFilter({ onClose, types, genres, streamServices, onSearch,}: SearchFilterProps) {
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); 
-
-        setIsSubmitting(true); 
+        e.preventDefault();
+        setIsSubmitting(true);
 
         try {
-            const formData = new FormData(e.currentTarget); 
-  
+            const formData = new FormData(e.currentTarget);
             const payload = {
-                search: formData.get("search"), 
-                genres: formData.getAll("genre"), 
-                type: formData.get("type"), 
-                streamService: formData.get("streamService"), 
+                search: formData.get("search")?.toString().trim() || "",
+                genres: formData.getAll("genre").map((genre) => genre.toString().trim()),
+                type: formData.get("type")?.toString().trim() || null,
+                streamService: formData.get("streamService")?.toString().trim() || null,
             };
-
-            console.log("Dados enviados:", payload); 
-
-            
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-
-            onClose(); 
+            onSearch(payload);
         } catch (error) {
             console.error("Erro ao enviar o formulário:", error);
         } finally {
-            setIsSubmitting(false); 
+            setIsSubmitting(false);
+            onClose();
         }
     };
-
 
     return (
         <form onSubmit={handleSubmit}>
@@ -66,7 +65,6 @@ export default function SearchFilter({ onClose, types, genres, streamServices }:
                                 </div>
                             </div>
                         </div>
-
                         <a className="collapseTitle" data-bs-toggle="collapse" data-bs-target="#collapseType" aria-expanded="false" aria-controls="collapseType">
                             Tipo
                         </a>

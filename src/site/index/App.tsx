@@ -29,13 +29,61 @@ function App() {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [selectedStreamService, setSelectedStreamService] = useState<string | null>(null);
-  const [filterName, setFilterName] = useState<string>("Produções Recomendadas");
+  const [searchFilters, setSearchFilters] = useState<{
+    search: string;
+    genres: string[];
+    type: string | null;
+    streamService: string | null;
+  }>({
+    search: "",
+    genres: [],
+    type: null,
+    streamService: null,
+  });
+  const generateFilterName = () => {
+    const filters: string[] = [];
 
+    if (searchFilters.search) {
+      filters.push(`Nome: ${searchFilters.search}`);
+    }
+    if (searchFilters.genres.length > 0) {
+      filters.push(`Gênero: ${searchFilters.genres.join(", ")}`);
+    }
+    if (searchFilters.type) {
+      filters.push(`Tipo: ${searchFilters.type}`);
+    }
+    if (searchFilters.streamService) {
+      filters.push(`Serviço: ${searchFilters.streamService}`);
+    }
+
+    return filters.length > 0 ? `Pesquisa: ${filters.join(", ")}` : "Produções Recomendadas";
+  };
+  const filterName = generateFilterName();
   const filteredProductions = PRODUCTIONS.audiovisual_productions.filter((production) => {
-    const matchesGenre = selectedGenre ? production.genre.map((g) => g.trim()).includes(selectedGenre) : true;
-    const matchesType = selectedType ? production.type.trim() === selectedType : true;
-    const matchesStreamService = selectedStreamService ? production.streamService.trim() === selectedStreamService : true;
-    return matchesGenre && matchesType && matchesStreamService;
+    const matchesGenre =
+      selectedGenre || searchFilters.genres.length > 0
+        ? (selectedGenre ? production.genre.map((g) => g.trim()).includes(selectedGenre) : true) &&
+        searchFilters.genres.every((genre) => production.genre.map((g) => g.trim()).includes(genre))
+        : true;
+
+    const matchesType =
+      selectedType || searchFilters.type
+        ? (selectedType ? production.type.trim() === selectedType : true) &&
+        (searchFilters.type ? production.type.trim() === searchFilters.type : true)
+        : true;
+
+    const matchesStreamService =
+      selectedStreamService || searchFilters.streamService
+        ? (selectedStreamService ? production.streamService.trim() === selectedStreamService : true) &&
+        (searchFilters.streamService ? production.streamService.trim() === searchFilters.streamService : true)
+        : true;
+
+    const matchesSearch =
+      searchFilters.search.trim() !== ""
+        ? production.name.toLowerCase().includes(searchFilters.search.toLowerCase())
+        : true;
+
+    return matchesGenre && matchesType && matchesStreamService && matchesSearch;
   });
 
   return (
@@ -49,20 +97,18 @@ function App() {
             setSelectedGenre(genre);
             setSelectedType(null);
             setSelectedStreamService(null);
-            setFilterName(genre ? `Gênero: ${genre}` : "Produções Recomendadas");
           }}
           onTypeSelect={(type) => {
             setSelectedType(type);
             setSelectedGenre(null);
             setSelectedStreamService(null);
-            setFilterName(type ? `Tipo: ${type}` : "Produções Recomendadas");
           }}
           onStreamServiceSelect={(streamService) => {
             setSelectedStreamService(streamService);
             setSelectedGenre(null);
             setSelectedType(null);
-            setFilterName(streamService ? `Serviço: ${streamService}` : "Produções Recomendadas");
           }}
+          onSearch={(filters) => setSearchFilters(filters)}
         />
       </header>
       <div className="top-space"></div>
