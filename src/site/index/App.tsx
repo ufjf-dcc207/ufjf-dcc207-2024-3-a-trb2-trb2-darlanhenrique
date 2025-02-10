@@ -90,6 +90,9 @@ function appReducer(state: any, action: any) {
     case "SET_SEARCH_FILTERS":
       return {
         ...state,
+        selectedGenre: null,
+        selectedType: null,
+        selectedStreamService: null,
         searchFilters: action.payload,
         isDetailsPage: false,
       };
