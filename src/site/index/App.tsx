@@ -40,42 +40,48 @@ function App() {
     type: null,
     streamService: null,
   });
+
   const generateFilterName = () => {
+    if (selectedGenre) 
+      return `Gênero: ${selectedGenre}`;
+    if (selectedType) 
+      return `Tipo: ${selectedType}`;    
+    if (selectedStreamService) 
+      return `Serviço: ${selectedStreamService}`;    
+
     const filters: string[] = [];
 
-    if (searchFilters.search) {
+    if (searchFilters.search) 
       filters.push(`Nome: ${searchFilters.search}`);
-    }
-    if (searchFilters.genres.length > 0) {
+    if (searchFilters.genres.length > 0) 
       filters.push(`Gênero: ${searchFilters.genres.join(", ")}`);
-    }
-    if (searchFilters.type) {
+    if (searchFilters.type) 
       filters.push(`Tipo: ${searchFilters.type}`);
-    }
-    if (searchFilters.streamService) {
+    if (searchFilters.streamService) 
       filters.push(`Serviço: ${searchFilters.streamService}`);
-    }
 
-    return filters.length > 0 ? `Pesquisa: ${filters.join(", ")}` : "Produções Recomendadas";
+    return filters.length > 0 ? `${filters.join(", ")}` : "Produções Recomendadas";
   };
+
   const filterName = generateFilterName();
+
   const filteredProductions = PRODUCTIONS.audiovisual_productions.filter((production) => {
     const matchesGenre =
       selectedGenre || searchFilters.genres.length > 0
         ? (selectedGenre ? production.genre.map((g) => g.trim()).includes(selectedGenre) : true) &&
-        searchFilters.genres.every((genre) => production.genre.map((g) => g.trim()).includes(genre))
+          searchFilters.genres.every((genre) => production.genre.map((g) => g.trim()).includes(genre))
         : true;
 
     const matchesType =
       selectedType || searchFilters.type
         ? (selectedType ? production.type.trim() === selectedType : true) &&
-        (searchFilters.type ? production.type.trim() === searchFilters.type : true)
+          (searchFilters.type ? production.type.trim() === searchFilters.type : true)
         : true;
 
     const matchesStreamService =
       selectedStreamService || searchFilters.streamService
         ? (selectedStreamService ? production.streamService.trim() === selectedStreamService : true) &&
-        (searchFilters.streamService ? production.streamService.trim() === searchFilters.streamService : true)
+          (searchFilters.streamService ? production.streamService.trim() === searchFilters.streamService : true)
         : true;
 
     const matchesSearch =
@@ -97,16 +103,34 @@ function App() {
             setSelectedGenre(genre);
             setSelectedType(null);
             setSelectedStreamService(null);
+            setSearchFilters({
+              search: "",
+              genres: [],
+              type: null,
+              streamService: null,
+            });
           }}
           onTypeSelect={(type) => {
             setSelectedType(type);
             setSelectedGenre(null);
             setSelectedStreamService(null);
+            setSearchFilters({
+              search: "",
+              genres: [],
+              type: null,
+              streamService: null,
+            });
           }}
           onStreamServiceSelect={(streamService) => {
             setSelectedStreamService(streamService);
             setSelectedGenre(null);
             setSelectedType(null);
+            setSearchFilters({
+              search: "",
+              genres: [],
+              type: null,
+              streamService: null,
+            });
           }}
           onSearch={(filters) => setSearchFilters(filters)}
         />

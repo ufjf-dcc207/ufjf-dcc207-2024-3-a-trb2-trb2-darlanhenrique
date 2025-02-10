@@ -18,15 +18,7 @@ interface NavbarProps {
     }) => void;
 }
 
-export default function Navbar({
-    types,
-    genres,
-    streamServices,
-    onGenreSelect,
-    onTypeSelect,
-    onStreamServiceSelect,
-    onSearch,
-}: NavbarProps) {
+export default function Navbar({ types, genres, streamServices, onGenreSelect, onTypeSelect, onStreamServiceSelect, onSearch,}: NavbarProps) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const handleModalOpen = () => setIsModalOpen(true);
     const handleModalClose = () => setIsModalOpen(false);
@@ -69,6 +61,12 @@ export default function Navbar({
                                     onGenreSelect(null);
                                     onTypeSelect(null);
                                     onStreamServiceSelect(null);
+                                    onSearch({
+                                        search: "",
+                                        genres: [],
+                                        type: null,
+                                        streamService: null,
+                                    });
                                 }}
                             >
                                 Início
@@ -90,7 +88,7 @@ export default function Navbar({
                         ))}
                         <li className="nav-item dropdown">
                             <a
-                                className={`btn ${isScrolled ? 'btn-outline-dark' : 'btn-outline-light'}`}
+                                className={`btn me-2 ${isScrolled ? 'btn-outline-dark' : 'btn-outline-light'}`}
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -110,6 +108,33 @@ export default function Navbar({
                                             }}
                                         >
                                             {genre}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <a
+                                className={`btn ${isScrolled ? 'btn-outline-dark' : 'btn-outline-light'}`}
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Streaming
+                            </a>
+                            <ul className="dropdown-menu">
+                                {streamServices.map((streamService) => (
+                                    <li key={streamService}>
+                                        <a
+                                            className="dropdown-item text-capitalize"
+                                            href={`#${streamService}`}
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                onStreamServiceSelect(streamService);
+                                            }}
+                                        >
+                                            {streamService}
                                         </a>
                                     </li>
                                 ))}

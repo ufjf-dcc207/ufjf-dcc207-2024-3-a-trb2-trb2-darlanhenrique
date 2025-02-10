@@ -9,7 +9,7 @@ interface MainProps {
 }
 
 export default function Main({ productions, filterName }: MainProps) {
-    const isFilterActive = filterName !== "Produções Recomendadas" && filterName !== "Todas as Produções";
+    const isFilterActive = filterName !== "Produções Recomendadas";
 
     return (
         <>
