@@ -2,6 +2,7 @@ import "../../css/NewProduction.css";
 import { getClassificationLabel } from "../../utils/utils";
 
 interface ProductionProps {
+    id: number;
     name: string;
     type: string;
     genre: string[];

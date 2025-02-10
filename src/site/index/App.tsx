@@ -37,17 +37,17 @@ function App() {
         <Navbar types={allTypes} genres={allGenres} streamServices={streamServices} />
       </header>
 
-
       <div className="top-space"></div>
-      <main>
 
+      <main>
         {/* PARA AGRUPAR POR NOVAS PRODUÇÕES */}
         <Category key="new-productions" name="Novas Produções">
           {PRODUCTIONS.audiovisual_productions
             .filter((production) => production.isNew)
             .map((production) => (
               <NewProduction
-                key={production.name}
+                key={production.id}
+                id={production.id}
                 name={production.name}
                 type={production.type}
                 genre={production.genre}
@@ -67,11 +67,12 @@ function App() {
               production.genre.map((g) =>
                 g.trim()).includes(genre)).map((production) => (
                   <Production
-                    key={production.name}
+                    key={production.id}
+                    id={production.id}
                     name={production.name}
-                    year={production.year}    
+                    year={production.year}
                     type={production.type}
-                    genre={production.genre}
+                    genres={production.genre}
                     length={production.length}
                     description={production.description}
                     image={production.image}
@@ -89,11 +90,12 @@ function App() {
               production.type.trim() == type)
               .map((production) => (
                 <Production
-                  key={production.name}
+                  key={production.id}
+                  id={production.id}
                   name={production.name}
-                  year={production.year}    
+                  year={production.year}
                   type={production.type}
-                  genre={production.genre}
+                  genres={production.genre}
                   length={production.length}
                   description={production.description}
                   image={production.image}

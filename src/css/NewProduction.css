@@ -4,13 +4,13 @@
     align-items: center;
     justify-content: space-between;
     height: 85vh;
-    padding: 2rem; /* Adiciona um espaçamento interno */
+    padding: 2rem; 
     position: relative;
-    background-color: #000; /* Fundo preto para destacar o conteúdo */
+    background-color: #000; 
     color: white;
-    border-radius: 10px; /* Arredonda os cantos do carrossel */
+    border-radius: 10px; 
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dá um leve sombreamento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .new_production_image {
@@ -50,7 +50,7 @@
     font-weight: bold;
     margin-bottom: 1rem;
     color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Dá um efeito de destaque ao texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
 }
 
 .new_details {
@@ -62,7 +62,7 @@
 
 .new_buttons {
     display: flex;
-    gap: 1rem; /* Adiciona espaçamento entre os botões */
+    gap: 1rem; 
     margin-bottom: 1.5rem;
 }
 
@@ -124,8 +124,8 @@
 
 .new_image_indicative {
     position: absolute;
-    top: 29rem;
-    left: 32rem;
+    bottom: 1rem;
+    right: 1rem;
     border-radius: 0.5rem;
 }
 
@@ -174,8 +174,8 @@ button:hover {
 }
 @media (max-width: 768px) {
     .new_production {
-        flex-direction: column; /* Alinha o texto acima da imagem */
-        height: auto; /* Ajusta a altura */
+        flex-direction: column; 
+        height: auto; 
     }
 
     .new_production_details {
@@ -185,7 +185,7 @@ button:hover {
 
     .new_production_image {
         width: 100%;
-        height: 50vh; /* Ajusta a altura da imagem */
+        height: 50vh; 
     }
 }
 

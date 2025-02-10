@@ -1,6 +1,7 @@
 {
   "audiovisual_productions": [
     {
+      "id": 1,
       "name": "Ecos do Amanhã",
       "year": 2023,
       "type": "série",
@@ -12,6 +13,7 @@
       "streamService": "original"
     },
     {
+      "id": 2,
       "name": "Caminhos do Passado",
       "year": 2021,
       "type": "documentário",
@@ -23,6 +25,7 @@
       "streamService": "original"
     },
     {
+      "id": 3,
       "name": "Sombras da Lua",
       "year": 2022,
       "type": "filme",
@@ -35,6 +38,7 @@
       "streamService": "original"
     },
     {
+      "id": 4,
       "name": "Ritmo de Amanhecer",
       "year": 2024,
       "type": "novela",
@@ -46,6 +50,7 @@
       "streamService": "original"
     },
     {
+      "id": 5,
       "name": "Astro Hunters",
       "year": 2023,
       "type": "anime",
@@ -57,6 +62,7 @@
       "streamService": "original"
     },
     {
+      "id": 6,
       "name": "Entre Mundos",
       "year": 2023,
       "type": "série",
@@ -68,6 +74,7 @@
       "streamService": "original"
     },
     {
+      "id": 7,
       "name": "O Fio da Memória",
       "year": 2022,
       "type": "documentário",
@@ -79,6 +86,7 @@
       "streamService": "original"
     },
     {
+      "id": 8,
       "name": "Neon City",
       "year": 2024,
       "type": "filme",
@@ -90,6 +98,7 @@
       "streamService": "original"
     },
     {
+      "id": 9,
       "name": "O Último Guardião",
       "year": 2023,
       "type": "novela",
@@ -101,6 +110,7 @@
       "streamService": "original"
     },
     {
+      "id": 10,
       "name": "Dimensões Esquecidas",
       "year": 2024,
       "type": "anime",
@@ -112,6 +122,7 @@
       "streamService": "original"
     },
     {
+      "id": 11,
       "name": "Planeta X",
       "year": 2022,
       "type": "documentário",
@@ -124,6 +135,7 @@
       "streamService": "original"
     },
     {
+      "id": 12,
       "name": "Cores da Eternidade",
       "year": 2023,
       "type": "série",
@@ -135,6 +147,7 @@
       "streamService": "original"
     },
     {
+      "id": 13,
       "name": "Código Infinito",
       "year": 2023,
       "type": "filme",
@@ -146,6 +159,7 @@
       "streamService": "original"
     },
     {
+      "id": 14,
       "name": "Reinos Ancestrais",
       "year": 2024,
       "type": "novela",
@@ -157,6 +171,7 @@
       "streamService": "original"
     },
     {
+      "id": 15,
       "name": "Lendas da Eternidade",
       "year": 2022,
       "type": "anime",
@@ -168,6 +183,7 @@
       "streamService": "original"
     },
     {
+      "id": 16,
       "name": "Vortex Temporal",
       "year": 2023,
       "type": "documentário",
@@ -179,6 +195,7 @@
       "streamService": "original"
     },
     {
+      "id": 17,
       "name": "Estrondos do Horizonte",
       "year": 2023,
       "type": "série",
@@ -191,6 +208,7 @@
     },
 
     {
+      "id": 18,
       "name": "Neon Genesis Evangelion",
       "year": 1995,
       "type": "anime",
@@ -203,6 +221,7 @@
       "indicativeClassification": 16
     },
     {
+      "id": 19,
       "name": "Frieren",
       "year": 2023,
       "type": "anime",
@@ -215,6 +234,7 @@
       "indicativeClassification": 14
     },
     {
+      "id": 20,
       "name": "Fullmetal Alchemist: Brotherhood",
       "year": 2009,
       "type": "anime",
@@ -226,6 +246,7 @@
       "indicativeClassification": 14
     },
     {
+      "id": 21,
       "name": "Clannad",
       "year": 2007,
       "type": "anime",
@@ -237,6 +258,7 @@
       "indicativeClassification": 10
     },
     {
+      "id": 22,
       "name": "Final Fantasy 7: Advent Children",
       "year": 2005,
       "type": "filme",
@@ -249,6 +271,7 @@
       "indicativeClassification": 12
     },
     {
+      "id": 23,
       "name": "À Espera de um Milagre",
       "year": 1999,
       "type": "filme",
@@ -260,6 +283,7 @@
       "indicativeClassification": 14
     },
     {
+      "id": 24,
       "name": "Titanic",
       "year": 1997,
       "type": "filme",
@@ -271,6 +295,7 @@
       "indicativeClassification": 12
     },
     {
+      "id": 25,
       "name": "Deadpool",
       "year": 2016,
       "type": "filme",
@@ -282,6 +307,7 @@
       "indicativeClassification": 18
     },
     {
+      "id": 26,
       "name": "Round 6",
       "year": 2021,
       "type": "série",
@@ -294,6 +320,7 @@
       "indicativeClassification": 18
     },
     {
+      "id": 27,
       "name": "A Favorita",
       "year": 2008,
       "type": "novela",
@@ -306,6 +333,7 @@
       "indicativeClassification": 12
     },
     {
+      "id": 28,
       "name": "Caminho das Índias",
       "year": 2009,
       "type": "novela",
