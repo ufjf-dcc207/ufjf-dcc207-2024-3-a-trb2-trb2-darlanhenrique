@@ -44,6 +44,7 @@
 .production:hover .production_details {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .production_image {

@@ -13,13 +13,14 @@ interface ProductionProps {
     isNew?: boolean;
     classification: number;
     streamService: string;
+    onClick?: () => void;
 }
 
-export default function Production({ id, name, year, type, genres, length, description, image, isNew, classification, streamService }: ProductionProps) {
+export default function Production({ id, name, year, type, genres, length, description, image, isNew, classification, streamService, onClick }: ProductionProps) {
     let classificationLabel = getClassificationLabel(classification);
 
     return (
-        <div key={id} className="production position-relative">
+        <div key={id} className="production position-relative" onClick={onClick}>
             <div className="production_image_wrapper">
                 <img className="production_image img-fluid" src={`./img/productions/${image}`} alt={name} />
                 {isNew && <div className="production-new">{type === "série" || type === "novela" ? "Nova" : " Novo"} {type}</div>}

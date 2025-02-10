@@ -6,9 +6,10 @@ import PRODUCTIONS from '../../database/Audiovisual_productions.json';
 interface MainProps {
     productions: any[];
     filterName: string;
+    onProductionClick: (production: any) => void;
 }
 
-export default function Main({ productions, filterName }: MainProps) {
+export default function Main({ productions, filterName, onProductionClick }: MainProps) {
     const isFilterActive = filterName !== "Produções Recomendadas";
 
     return (
@@ -55,6 +56,7 @@ export default function Main({ productions, filterName }: MainProps) {
                         isNew={production.isNew}
                         classification={production.indicativeClassification}
                         streamService={production.streamService}
+                        onClick={() => onProductionClick(production)}
                     />
                 ))}
             </Category>

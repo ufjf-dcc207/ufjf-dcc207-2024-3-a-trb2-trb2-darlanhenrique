@@ -5,6 +5,7 @@ import PRODUCTIONS from '../../database/Audiovisual_productions.json';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import Main from './Main';
+import ProductionDetailsPage from '../production/ProductionDetailsPage';
 
 const allGenres: string[] = Array.from(
   new Set(
@@ -40,27 +41,36 @@ function App() {
     type: null,
     streamService: null,
   });
+  const [selectedProduction, setSelectedProduction] = useState<any | null>(null);
+  const [isDetailsPage, setIsDetailsPage] = useState(false);
 
+  // Função para gerar o filterName dinamicamente
   const generateFilterName = () => {
-    if (selectedGenre) 
+    if (selectedGenre) {
       return `Gênero: ${selectedGenre}`;
-    if (selectedType) 
-      return `Tipo: ${selectedType}`;    
-    if (selectedStreamService) 
-      return `Serviço: ${selectedStreamService}`;    
+    }
+    if (selectedType) {
+      return `Tipo: ${selectedType}`;
+    }
+    if (selectedStreamService) {
+      return `Serviço: ${selectedStreamService}`;
+    }
 
     const filters: string[] = [];
-
-    if (searchFilters.search) 
+    if (searchFilters.search) {
       filters.push(`Nome: ${searchFilters.search}`);
-    if (searchFilters.genres.length > 0) 
+    }
+    if (searchFilters.genres.length > 0) {
       filters.push(`Gênero: ${searchFilters.genres.join(", ")}`);
-    if (searchFilters.type) 
+    }
+    if (searchFilters.type) {
       filters.push(`Tipo: ${searchFilters.type}`);
-    if (searchFilters.streamService) 
+    }
+    if (searchFilters.streamService) {
       filters.push(`Serviço: ${searchFilters.streamService}`);
+    }
 
-    return filters.length > 0 ? `${filters.join(", ")}` : "Produções Recomendadas";
+    return filters.length > 0 ? `Pesquisa: ${filters.join(", ")}` : "Produções Recomendadas";
   };
 
   const filterName = generateFilterName();
@@ -92,6 +102,32 @@ function App() {
     return matchesGenre && matchesType && matchesStreamService && matchesSearch;
   });
 
+  // Função para abrir a página de detalhes
+  const handleProductionClick = (production: any) => {
+    setSelectedProduction(production);
+    setIsDetailsPage(true);
+  };
+
+  // Função para voltar à lista de produções
+  const handleBackToList = () => {
+    setSelectedProduction(null);
+    setIsDetailsPage(false);
+  };
+
+  // Função para resetar todos os filtros
+  const resetFilters = () => {
+    setSelectedGenre(null);
+    setSelectedType(null);
+    setSelectedStreamService(null);
+    setSearchFilters({
+      search: "",
+      genres: [],
+      type: null,
+      streamService: null,
+    });
+    handleBackToList(); // Volta à lista de produções
+  };
+
   return (
     <>
       <header className="mb-5">
@@ -109,6 +145,7 @@ function App() {
               type: null,
               streamService: null,
             });
+            handleBackToList();
           }}
           onTypeSelect={(type) => {
             setSelectedType(type);
@@ -120,6 +157,7 @@ function App() {
               type: null,
               streamService: null,
             });
+            handleBackToList();
           }}
           onStreamServiceSelect={(streamService) => {
             setSelectedStreamService(streamService);
@@ -131,13 +169,28 @@ function App() {
               type: null,
               streamService: null,
             });
+            handleBackToList();
           }}
-          onSearch={(filters) => setSearchFilters(filters)}
+          onSearch={(filters) => {
+            setSearchFilters(filters);
+            handleBackToList();
+          }}
         />
       </header>
       <div className="top-space"></div>
       <main>
-        <Main productions={filteredProductions} filterName={filterName} />
+        {isDetailsPage ? (
+          <ProductionDetailsPage
+            production={selectedProduction}
+            onBackToList={handleBackToList}
+          />
+        ) : (
+          <Main
+            productions={filteredProductions}
+            filterName={filterName}
+            onProductionClick={handleProductionClick}
+          />
+        )}
       </main>
       <footer>
         <Footer />
