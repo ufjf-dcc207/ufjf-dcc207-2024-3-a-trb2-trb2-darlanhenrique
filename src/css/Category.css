@@ -73,3 +73,8 @@
   box-sizing: initial !important;
   width: 2rem !important;
 }
+
+.category_result {
+  font-size: 2.2rem;
+  font-weight: 600;
+}

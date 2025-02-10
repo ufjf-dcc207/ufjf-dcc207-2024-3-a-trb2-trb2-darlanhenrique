@@ -1,76 +1,63 @@
-import PRODUCTIONS from '../../database/Audiovisual_productions.json'
 import Category from './Category';
-import Production from './Production'
-import NewProduction from './NewProduction'
+import Production from './Production';
+import NewProduction from './NewProduction';
+import PRODUCTIONS from '../../database/Audiovisual_productions.json';
 
-const allGenres: string[] = Array.from(
-  new Set(
-    PRODUCTIONS.audiovisual_productions
-      .flatMap((production) => production.genre.map((genre) => genre.trim()))
-  )
-);
+interface MainProps {
+    productions: any[];
+    filterName: string;
+}
 
-const allTypes: string[] = Array.from(
-  new Set(
-    PRODUCTIONS.audiovisual_productions
-      .map((production) => production.type.trim())
-  )
-);
+export default function Main({ productions, filterName }: MainProps) {
+    const isFilterActive = filterName !== "Produções Recomendadas" && filterName !== "Todas as Produções";
 
-const streamServices: string[] = Array.from(
-  new Set(
-    PRODUCTIONS.audiovisual_productions
-      .map((production) => production.streamService.trim())
-  )
-);
+    return (
+        <>
+            {/* EXIBIR CARROSSEL DE NOVAS PRODUÇÕES APENAS QUANDO NENHUM FILTRO ESTÁ ATIVO */}
+            {!isFilterActive && (
+                <Category key="new-productions" name="Novas Produções">
+                    {PRODUCTIONS.audiovisual_productions
+                        .filter((production) => production.isNew)
+                        .map((production) => (
+                            <NewProduction
+                                key={production.id}
+                                id={production.id}
+                                name={production.name}
+                                type={production.type}
+                                genre={production.genre}
+                                length={production.length}
+                                description={production.description}
+                                image={production.image}
+                                isNew={production.isNew}
+                                classification={production.indicativeClassification}
+                                streamService={production.streamService}
+                            />
+                        ))}
+                </Category>
+            )}
 
-
-export default function Main() {
-  return (
-    <div>
-        {/* PARA AGRUPAR POR NOVAS PRODUÇÕES / CARROSSEL PRINCIPAL */}
-        <Category key="new-productions" name="Novas Produções">
-          {PRODUCTIONS.audiovisual_productions
-            .filter((production) => production.isNew)
-            .map((production) => (
-              <NewProduction
-                key={production.id}
-                id={production.id}
-                name={production.name}
-                type={production.type}
-                genre={production.genre}
-                length={production.length}
-                description={production.description}
-                image={production.image}
-                isNew={production.isNew}
-                classification={production.indicativeClassification}
-                streamService={production.streamService}
-              />
-            ))}
-        </Category>
-        {/* PARA AGRUPAR POR GENEROS */}
-        {allGenres.map((genre) => (
-          <Category key={genre} type='category' name={genre}>
-            {PRODUCTIONS.audiovisual_productions.filter((production) =>
-              production.genre.map((g) =>
-                g.trim()).includes(genre)).map((production) => (
-                  <Production
-                    key={production.id}
-                    id={production.id}
-                    name={production.name}
-                    year={production.year}
-                    type={production.type}
-                    genres={production.genre}
-                    length={production.length}
-                    description={production.description}
-                    image={production.image}
-                    isNew={production.isNew}
-                    classification={production.indicativeClassification}
-                    streamService={production.streamService}
-                  />
+            {/* EXIBIR PRODUÇÕES FILTRADAS */}
+            <Category key="filtered-productions" name={filterName}>
+                {(filterName === "Produções Recomendadas"
+                    ? productions.sort(() => 0.5 - Math.random()).slice(0, 6)
+                    : productions
+                ).map((production) => (
+                    <Production
+                        key={production.id}
+                        id={production.id}
+                        name={production.name}
+                        year={production.year}
+                        type={production.type}
+                        genres={production.genre}
+                        length={production.length}
+                        description={production.description}
+                        image={production.image}
+                        isNew={production.isNew}
+                        classification={production.indicativeClassification}
+                        streamService={production.streamService}
+                    />
                 ))}
-          </Category>
-        ))}
-    </div>
-  )
+            </Category>
+        </>
+    );
 }

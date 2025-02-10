@@ -3,7 +3,7 @@ import logo from '../assets/logo/Net_Prime_Plus_Max_Flix.png';
 
 export default function Footer() {
     return (
-        <footer className="footer mt-5">
+        <div className="footer mt-5">
             <div className="container">
                 <div className="">
                     <div className="col-12 font-medium text-center text-gray-100 fs-4">
@@ -19,7 +19,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
 
     );
 
